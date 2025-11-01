@@ -1,9 +1,11 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
 from pydantic import BaseModel
 from datetime import datetime
 from fastapi.middleware.cors import CORSMiddleware # To allow frontend to connect
+import json
 
 import data.weather_fetch as weather_fetch
+import data.vessel as vessel
 from dotenv import load_dotenv
 # Download the required libraries using: pip install fastapi "uvicorn[standard]"
 # To run, type the following command into the terminal:
@@ -12,14 +14,26 @@ from dotenv import load_dotenv
 load_dotenv()
 app = FastAPI(
     title="Ship Visualization Backend",
-    description="Backend API for Ship Visualization Application",
+    description="""
+    Backend API for Ship Visualization Application
+    
+    ## WebSocket Endpoints (Not shown in Swagger)
+    
+    ### `/ws/ships` - Live Ship Tracking
+    - **Protocol:** WebSocket
+    - **URL:** `ws://localhost:8000/ws/ships`
+    - **Description:** Streams real-time position data for ships heading to Rotterdam
+    - **Data Format:** JSON with fields: mmsi, ship_name, latitude, longitude, speed, course, heading, nav_status, timestamp, destination, call_sign, ship_type
+    
+    Connect using: `const ws = new WebSocket('ws://localhost:8000/ws/ships');`
+    """,
     version="1.0.0"
 )
 
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8000", "http://127.0.0.1:8000"],  # Be more specific about allowed origins
+    allow_origins=["http://localhost:3000", "http://localhost:8000", "http://127.0.0.1:8000", "http://localhost:5173"],  # Common frontend ports
     allow_credentials=True,
     allow_methods=["GET", "POST"],  # Specify the methods you actually use
     allow_headers=["*"],
@@ -43,5 +57,27 @@ def update_port_forecast(lat: float, lon: float):
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.websocket("/ws/ships")
+async def websocket_ship_tracking(websocket: WebSocket):
+    """
+    WebSocket endpoint that streams real-time ship positions for Rotterdam-bound vessels.
+    Frontend connects to ws://localhost:8000/ws/ships to receive live updates.
+    """
+    await websocket.accept()
     
-    
+    try:
+        # Start streaming ship data from AIS
+        # Using global bounding box to track all ships heading to Rotterdam
+        async for ship_data in vessel.connect_ais_stream(
+            bounding_box=[[-90, -180], [90, 180]]
+        ):
+            # Send ship position data to frontend
+            await websocket.send_json(ship_data)
+            
+    except WebSocketDisconnect:
+        print("WebSocket client disconnected")
+    except Exception as e:
+        print(f"WebSocket error: {e}")
+        await websocket.close()
