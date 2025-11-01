@@ -70,12 +70,28 @@ async def websocket_ship_tracking(websocket: WebSocket):
     try:
         # Start streaming ship data from AIS
         # Using global bounding box to track all ships heading to Rotterdam
-        async for ship_data in vessel.connect_ais_stream(
+        async for ship_data in vessel.predict_port_bound_ships(
             bounding_box=[[-90, -180], [90, 180]]
         ):
             # Send ship position data to frontend
             await websocket.send_json(ship_data)
             
+    except WebSocketDisconnect:
+        print("WebSocket client disconnected")
+    except Exception as e:
+        print(f"WebSocket error: {e}")
+        await websocket.close()
+
+@app.websocket("/ws/all_ships")
+async def websocket_all_ships(websocket: WebSocket):
+    """
+    WebSocket endpoint that streams real-time position data for all ships in the bounding box.
+    Frontend connects to ws://localhost:8000/ws/all_ships to receive live updates.
+    """
+    await websocket.accept()
+    try:
+        async for ship_data in vessel.get_all_ships(bounding_box=[[-90, -180], [90, 180]]):
+            await websocket.send_json(ship_data)
     except WebSocketDisconnect:
         print("WebSocket client disconnected")
     except Exception as e:
