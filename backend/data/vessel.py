@@ -118,7 +118,7 @@ async def get_all_ships(bounding_box: list[list[float]]):
             )
             
             # IMPORTANT: Yield the data to return it from the generator
-            yield ship_data
+            yield ship_data.model_dump()
 
 async def main():
     """Test function to run the ship tracker"""
