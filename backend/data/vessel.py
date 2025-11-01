@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 import os
 
 from dotenv import load_dotenv
+from models import ShipPositionData
 load_dotenv()
 ports = ["ROTTERDAM"]
 
@@ -64,25 +65,25 @@ async def connect_ais_stream(bounding_box: list[list[float]], filter_ship_mmsi: 
                 ship_name = ship_info.get("name") or message.get("MetaData", {}).get("ShipName", "Unknown")
                 
                 # Build comprehensive ship data
-                ship_data = {
-                    "mmsi": user_id,
-                    "ship_name": ship_name,
-                    "latitude": position_data.get("Latitude"),
-                    "longitude": position_data.get("Longitude"),
-                    "speed": position_data.get("Sog", 0),  # Speed over ground
-                    "course": position_data.get("Cog", 0),  # Course over ground
-                    "heading": position_data.get("TrueHeading", 0),
-                    "nav_status": position_data.get("NavigationalStatus", 15),
-                    "timestamp": message.get("MetaData", {}).get("time_utc", datetime.now(timezone.utc).isoformat()),
-                    "destination": ship_info.get("destination", "ROTTERDAM"),
-                    "call_sign": ship_info.get("call_sign", ""),
-                    "ship_type": ship_info.get("ship_type", 0)
-                }
+                ship_data = ShipPositionData(
+                    mmsi=user_id,
+                    ship_name=ship_name,
+                    latitude=position_data.get("Latitude"),
+                    longitude=position_data.get("Longitude"),
+                    speed=position_data.get("Sog", 0),  # Speed over ground
+                    course=position_data.get("Cog", 0),  # Course over ground
+                    heading=position_data.get("TrueHeading", 0),
+                    nav_status=position_data.get("NavigationalStatus", 15),
+                    timestamp=message.get("MetaData", {}).get("time_utc", datetime.now(timezone.utc).isoformat()),
+                    destination=ship_info.get("destination", "ROTTERDAM"),
+                    call_sign=ship_info.get("call_sign", ""),
+                    ship_type=ship_info.get("ship_type", 0)
+                )
                 
-                print(f"Position Update - {ship_name} (MMSI: {user_id}): Lat={ship_data['latitude']}, Lon={ship_data['longitude']}")
+                print(f"Position Update - {ship_name} (MMSI: {user_id}): Lat={ship_data.latitude}, Lon={ship_data.longitude}")
                 
                 # Yield the data for API consumption
-                yield ship_data
+                yield ship_data.model_dump()
 
 if __name__ == "__main__":
     asyncio.run(connect_ais_stream(bounding_box=[[-90, -180], [90, 180]]))
