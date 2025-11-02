@@ -1,7 +1,6 @@
 from datetime import datetime, timedelta
 import json
 from pathlib import Path
-import pandas as pd
 from typing import Dict, Tuple, Optional, List
 from pydantic import BaseModel
 
@@ -33,17 +32,17 @@ def eta_to_iso(eta_dict: Dict, reference: str) -> Optional[str]:
         return None
 
 def assess_ship_docking(ship: ShipPositionData):
-    eta_dt = datetime.fromisoformat(ship.eta)
+    eta_dt = eta_to_iso(ship.eta, ship.timestamp)
     now = datetime.now()
     
     # Only assess if ETA is within 5 days
     if eta_dt - now > timedelta(days=5):
-        return 0.0, {"Warning": "ETA beyond 5 days; no reliable forecast available for assesment"}
+        return "N/A", 0.0, {"Warning": "ETA beyond 5 days; no reliable forecast available for assesment"}
 
     # Load pre-fetched data
     conditions = get_conditions_at_time(eta_dt)
     if not conditions:
-        return 0.0, {"Warning": "ETA beyond 5 days; no reliable forecast available for assesment"}
+        return "N/A", 0.0, {"Warning": "ETA beyond 5 days; no reliable forecast available for assesment"}
 
     # Calculate risk score and get risk factors
     risk_score, risk_factors = calculate_risk(conditions)
@@ -61,7 +60,7 @@ def assess_ship_docking(ship: ShipPositionData):
     else:
         status = "NO_DOCK"
 
-    return risk_score, risk_factors
+    return status, risk_score, risk_factors
 
 def get_conditions_at_time(target_time: datetime) -> Optional[Dict]:
     """Get weather and marine conditions closest to target time"""
