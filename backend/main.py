@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect, Query
 from pydantic import BaseModel
 from datetime import datetime
 from fastapi.middleware.cors import CORSMiddleware # To allow frontend to connect
@@ -21,11 +21,12 @@ app = FastAPI(
     
     ### `/ws/ships` - Live Ship Tracking
     - **Protocol:** WebSocket
-    - **URL:** `ws://localhost:8000/ws/ships`
-    - **Description:** Streams real-time position data for ships heading to Rotterdam
+    - **URL:** `ws://localhost:8000/ws/ships?port={port_name}`
+    - **Description:** Streams real-time position data for ships heading to the specified port
+    - **Query Parameters:** `port` (required) - Name of the destination port (e.g., "ROTTERDAM", "HAMBURG", "ANTWERP")
     - **Data Format:** JSON with fields: mmsi, ship_name, latitude, longitude, speed, course, heading, nav_status, timestamp, destination, call_sign, ship_type
     
-    Connect using: `const ws = new WebSocket('ws://localhost:8000/ws/ships');`
+    Connect using: `const ws = new WebSocket('ws://localhost:8000/ws/ships?port=ROTTERDAM');`
     """,
     version="1.0.0"
 )
@@ -60,10 +61,13 @@ def update_port_forecast(lat: float, lon: float):
 
 
 @app.websocket("/ws/ships")
-async def websocket_ship_tracking(websocket: WebSocket, port: str):
+async def websocket_ship_tracking(websocket: WebSocket, port: str = Query(...)):
     """
     WebSocket endpoint that streams real-time ship positions for the given port.
-    Frontend connects to ws://localhost:8000/ws/ships to receive live updates.
+    Frontend connects to ws://localhost:8000/ws/ships?port={port_name} to receive live updates.
+    
+    Args:
+        port: Name of the destination port (e.g., "ROTTERDAM", "HAMBURG", "ANTWERP")
     """
     await websocket.accept()
     
