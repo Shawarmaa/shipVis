@@ -27,7 +27,7 @@ ShipVis is an advanced maritime intelligence platform that combines **real-time 
 
 ### Our Solution
 Real-time risk assessment combining:
-- 🛰️ **Live AIS tracking** (500+ vessels simultaneously)
+- 🛰️ **Live AIS tracking** (75000+ vessels simultaneously)
 - 🌊 **Multi-source marine data** (wave, current, sea level)
 - 🌤️ **Weather forecasts** (5-day horizon, 3-hour resolution)
 - 📰 **NLP-based news monitoring** (port disruptions & events)
