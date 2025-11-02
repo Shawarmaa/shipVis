@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import json
 from pathlib import Path
 from typing import Dict, Tuple, Optional, List
@@ -26,13 +26,13 @@ def eta_to_iso(eta_dict: Dict, reference: str) -> Optional[str]:
         hours = int(eta_dict.get("Hour") or eta_dict.get("hour") or 0)
         minutes = int(eta_dict.get("Minute") or eta_dict.get("minute") or 0)
         ref = reference or datetime.now()
-        dt = ref + timedelta(days=days, hours=hours, minutes=minutes)
+        dt = datetime.fromisoformat(ref) + timedelta(days=days, hours=hours, minutes=minutes)
         return dt.isoformat()
     except Exception:
         return None
 
-def assess_ship_docking(ship: ShipPositionData):
-    eta_dt = eta_to_iso(ship.eta, ship.timestamp)
+def assess_ship_docking(eta, timestamp):
+    eta_dt = datetime.fromisoformat(eta_to_iso(eta, timestamp))
     now = datetime.now()
     
     # Only assess if ETA is within 5 days
@@ -75,18 +75,32 @@ def get_conditions_at_time(target_time: datetime) -> Optional[Dict]:
         with open(base_dir / "marine_data.json") as f:
             marine_data = json.load(f)
 
-        # Find closest weather forecast
+        # Normalize target_time to UTC (make timezone-aware)
+        if target_time.tzinfo is None:
+            target_time_utc = target_time.replace(tzinfo=timezone.utc)
+        else:
+            target_time_utc = target_time.astimezone(timezone.utc)
+
+        def _parse_to_utc(s: str) -> datetime:
+            """Parse ISO-like string to a timezone-aware UTC datetime."""
+            dt = datetime.fromisoformat(s)
+            if dt.tzinfo is None:
+                # assume naive datetimes in the files are UTC
+                return dt.replace(tzinfo=timezone.utc)
+            return dt.astimezone(timezone.utc)
+
+        # Find closest weather forecast (weather dt_txt may be naive -> assume UTC)
         weather_list = weather_data['list']
         closest_weather = min(
             weather_list,
-            key=lambda x: abs(datetime.fromisoformat(x['dt_txt']) - target_time)
+            key=lambda x: abs(_parse_to_utc(x['dt_txt']) - target_time_utc)
         )
-        
-        # Find closest marine forecast
+
+        # Find closest marine forecast (marine times include offsets like +00:00)
         marine_hours = marine_data['hours']
         closest_marine = min(
             marine_hours,
-            key=lambda x: abs(datetime.fromisoformat(x['time']) - target_time)
+            key=lambda x: abs(_parse_to_utc(x['time']) - target_time_utc)
         )
         
         return {
@@ -161,4 +175,11 @@ def check_port_news(port_name: str) -> Optional[List[str]]:
                 
     return recent_alerts if recent_alerts else None
 
-
+if __name__ == "__main__":
+    
+    eta={"Day": 0, "Hour": 48, "Minute": 0}
+    timestamp="2024-06-01T12:00:00"
+    status, risk_score, risk_factors = assess_ship_docking(eta, timestamp)
+    print(f"Docking Status: {status}")
+    print(f"Risk Score: {risk_score:.2f}")
+    print(f"Risk Factors: {risk_factors}")
