@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware # To allow frontend to connec
 import json
 
 import data.weather_fetch as weather_fetch
+import data.tides_fetch as tides_fetch
 import data.news_fetch as news_fetch
 import data.vessel as vessel
 from dotenv import load_dotenv
@@ -48,7 +49,8 @@ async def root():
     """Root endpoint to verify API is working"""
     return {"status": "online", "timestamp": datetime.now().isoformat()}
 
-@app.get("/api/port_forecast")
+
+@app.get("/api/port_surface_forecast")
 def update_port_forecast(lat: float, lon: float):
     """
     Endpoint to get overwrite weather_data.json file with latest data from OpenWeatherMap API
@@ -59,7 +61,26 @@ def update_port_forecast(lat: float, lon: float):
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/port_marine_forecast")
+def update_marine_forecast(
+    lat: float, 
+    lon: float,
+    start_date: str = Query(default_factory= lambda: datetime.now().isoformat()),
+    end_date: str = Query(default_factory= lambda: (datetime.now() + timedelta(days=5)).isoformat())
+    ):
+    """
+    Endpoint to obtain marine forecast data and save to marine_data.json file
+    """
+    try:
+        tides_fetch.update_marine_stats(lat=lat, lon=lon, start_time=start_date, end_time=end_date)
+        return {"status": "success", "message": "Marinal stats data file updated"}
     
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+
 @app.get("/api/news_fetch")
 def get_news(
     locations: str, 
