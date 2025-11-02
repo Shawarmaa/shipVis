@@ -7,16 +7,15 @@ import os
 from dotenv import load_dotenv
 from models import ShipPositionData
 load_dotenv()
-ports = ["ROTTERDAM"]
 
 
-async def predict_port_bound_ships(bounding_box: list[list[float]], filter_ship_mmsi: list[str] = None,
-                             filter_message_types: list[str] = ["ShipStaticData", "PositionReport"]):
+async def predict_port_bound_ships(bounding_box: list[list[float]], port: str, filter_ship_mmsi: list[str] = None,
+                             filter_message_types: list[str] = ["ShipStaticData", "PositionReport"], port: str):
     """
-    Async generator that yields ship position data for Rotterdam-bound vessels.
+    Async generator that yields ship position data for the given port.
     Yields dict with ship data including position, speed, course, etc.
     """
-    # Set to track MMSI of ships heading to Rotterdam
+    # Set to track MMSI of ships heading to the given port
     ships_to_track = set()
     ship_static_info = {}  # Store static info for each ship
     
@@ -36,7 +35,7 @@ async def predict_port_bound_ships(bounding_box: list[list[float]], filter_ship_
             if message_type == "ShipStaticData":
                 static_data = message["Message"]["ShipStaticData"]
                 destination = static_data.get("Destination", "").strip()
-                if destination not in ports:
+                if destination != port:
                     continue
                 if static_data["Eta"]["Month"] != 0:
                     continue
@@ -75,7 +74,7 @@ async def predict_port_bound_ships(bounding_box: list[list[float]], filter_ship_
                     heading=position_data.get("TrueHeading", 0),
                     nav_status=position_data.get("NavigationalStatus", 15),
                     timestamp=message.get("MetaData", {}).get("time_utc", datetime.now(timezone.utc).isoformat()),
-                    destination=ship_info.get("destination", "ROTTERDAM"),
+                    destination=ship_info.get("destination", port),
                     call_sign=ship_info.get("call_sign", ""),
                     ship_type=ship_info.get("ship_type", 0)
                 )

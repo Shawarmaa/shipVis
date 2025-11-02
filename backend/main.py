@@ -60,9 +60,9 @@ def update_port_forecast(lat: float, lon: float):
 
 
 @app.websocket("/ws/ships")
-async def websocket_ship_tracking(websocket: WebSocket):
+async def websocket_ship_tracking(websocket: WebSocket, port: str):
     """
-    WebSocket endpoint that streams real-time ship positions for Rotterdam-bound vessels.
+    WebSocket endpoint that streams real-time ship positions for the given port.
     Frontend connects to ws://localhost:8000/ws/ships to receive live updates.
     """
     await websocket.accept()
@@ -71,7 +71,8 @@ async def websocket_ship_tracking(websocket: WebSocket):
         # Start streaming ship data from AIS
         # Using global bounding box to track all ships heading to Rotterdam
         async for ship_data in vessel.predict_port_bound_ships(
-            bounding_box=[[-90, -180], [90, 180]]
+            bounding_box=[[-90, -180], [90, 180]],
+            port=port
         ):
             # Send ship position data to frontend
             await websocket.send_json(ship_data)
