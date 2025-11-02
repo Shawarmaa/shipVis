@@ -17,16 +17,28 @@ const getVesselSymbol = (shipType: number) => {
   return '⛵' // Default/Other
 }
 
-// Get vessel color based on speed
-const getVesselColor = (speed: number) => {
-  if (speed < 0.1) return '#FF4444' // Red for stopped
-  if (speed < 5) return '#FFA500' // Orange for slow
+// Get vessel color based on docking status (priority) or speed (fallback)
+const getVesselColor = (vessel: ShipData) => {
+  // Priority: Use docking status if available
+  if (vessel.status) {
+    switch (vessel.status) {
+      case 'DOCK': return '#00FF00' // Green for safe to dock
+      case 'DELAY': return '#FFA500' // Orange for delays expected
+      case 'NO_DOCK': return '#FF4444' // Red for cannot dock
+      case 'N/A': return '#888888' // Gray for no assessment
+      default: return '#888888'
+    }
+  }
+  
+  // Fallback: Use speed-based coloring for vessels without status
+  if (vessel.speed < 0.1) return '#FF4444' // Red for stopped
+  if (vessel.speed < 5) return '#FFA500' // Orange for slow
   return '#00FF00' // Green for moving
 }
 
 // Create vessel icon
 const createVesselIcon = (vessel: ShipData) => {
-  const color = getVesselColor(vessel.speed)
+  const color = getVesselColor(vessel)
   const symbol = getVesselSymbol(vessel.ship_type)
   
   return L.divIcon({
@@ -151,6 +163,13 @@ function VesselClusterGroupComponent({ vessels, onVesselClick }: VesselClusterGr
       })
 
       // Add popup with vessel info
+      const statusInfo = vessel.status ? `
+        <div class="mt-2 pt-2 border-t border-gray-300">
+          <p><span class="font-medium">Status:</span> <span class="px-2 py-1 rounded text-xs" style="background-color: ${getVesselColor(vessel)}; color: white;">${vessel.status}</span></p>
+          ${vessel.risk_score !== undefined ? `<p><span class="font-medium">Risk:</span> ${(vessel.risk_score * 100).toFixed(1)}%</p>` : ''}
+        </div>
+      ` : ''
+      
       marker.bindPopup(`
         <div class="p-2 min-w-48">
           <h3 class="font-bold text-sm mb-1">${vessel.ship_name || 'Unknown Vessel'}</h3>
@@ -159,6 +178,7 @@ function VesselClusterGroupComponent({ vessels, onVesselClick }: VesselClusterGr
             <p><span class="font-medium">Speed:</span> ${vessel.speed.toFixed(1)} kts</p>
             <p><span class="font-medium">Course:</span> ${vessel.course}°</p>
             <p><span class="font-medium">Heading:</span> ${vessel.heading}°</p>
+            ${statusInfo}
           </div>
         </div>
       `)

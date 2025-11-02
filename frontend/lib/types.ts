@@ -11,6 +11,9 @@ export interface ShipData {
   destination: string;
   call_sign: string;
   ship_type: number;
+  status?: 'N/A' | 'DOCK' | 'DELAY' | 'NO_DOCK';
+  risk_score?: number;
+  risk_factors?: { [key: string]: string | number };
 }
 
 export type WebSocketStatus = 'connecting' | 'connected' | 'disconnected' | 'error';

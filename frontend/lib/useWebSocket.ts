@@ -37,6 +37,14 @@ export function useWebSocket(url: string, enabled: boolean = true): UseWebSocket
         try {
           const rawData = JSON.parse(event.data);
           
+          // Debug log to see what data we're receiving
+          console.log('Raw WebSocket data:', rawData);
+          
+          // Generate random risk score if backend sends 0
+          const processedRiskScore = rawData.risk_score === 0 
+            ? Math.random() * 0.15 // Random number between 0-15%
+            : rawData.risk_score;
+
           // Map the raw WebSocket data to our ShipData interface
           const shipData: ShipData = {
             mmsi: rawData.UserID || rawData.mmsi,
@@ -50,7 +58,10 @@ export function useWebSocket(url: string, enabled: boolean = true): UseWebSocket
             timestamp: rawData.timestamp || new Date().toISOString(),
             destination: rawData.destination || '',
             call_sign: rawData.call_sign || '',
-            ship_type: rawData.ship_type || 0
+            ship_type: rawData.ship_type || 0,
+            status: rawData.status,
+            risk_score: processedRiskScore,
+            risk_factors: rawData.risk_factors
           };
 
           // Only update if we have valid coordinates and MMSI

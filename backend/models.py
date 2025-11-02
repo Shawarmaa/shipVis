@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from datetime import datetime
-from typing import List, Optional
+from typing import List, Optional, Dict, Literal, Union
 
 
 class ShipPositionData(BaseModel):
@@ -17,6 +17,9 @@ class ShipPositionData(BaseModel):
     call_sign: str
     ship_type: int
     eta: Optional[dict] = None
+    status: Optional[Literal['N/A', 'DOCK', 'DELAY', 'NO_DOCK']] = None
+    risk_score: Optional[float] = None
+    risk_factors: Optional[Dict[str, Union[str, float]]] = None
 
 class HourlyInsight(BaseModel):
     time: str

@@ -83,7 +83,7 @@ export default function NauticalMap({
   const [selectedVessel, setSelectedVessel] = useState<ShipData | null>(null)
   const [flyToLocation, setFlyToLocation] = useState<[number, number, number] | null>(null)
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [activeLayers, setActiveLayers] = useState<Set<DataLayerType>>(new Set(['all-ships']))
+  const [activeLayers, setActiveLayers] = useState<Set<DataLayerType>>(new Set([]))
   const [rotterdamModalOpen, setRotterdamModalOpen] = useState(false)
 
   const toggleLayer = (layer: DataLayerType) => {

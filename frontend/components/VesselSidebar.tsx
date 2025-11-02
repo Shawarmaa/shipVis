@@ -189,6 +189,61 @@ export default function VesselSidebar({ vessel, onClose, isOpen }: VesselSidebar
             </div>
           </div>
 
+          {/* Docking Assessment */}
+          {vessel.status && (
+            <div>
+              <h4 className="text-sm font-medium text-gray-400 mb-2">DOCKING ASSESSMENT</h4>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-300 text-sm">Status:</span>
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    vessel.status === 'DOCK' ? 'bg-green-600/20 text-green-400 border border-green-600/30' :
+                    vessel.status === 'DELAY' ? 'bg-orange-600/20 text-orange-400 border border-orange-600/30' :
+                    vessel.status === 'NO_DOCK' ? 'bg-red-600/20 text-red-400 border border-red-600/30' :
+                    'bg-gray-600/20 text-gray-400 border border-gray-600/30'
+                  }`}>
+                    {vessel.status}
+                  </span>
+                </div>
+                
+                {vessel.risk_score !== undefined && (
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">Risk Score:</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-white font-mono">
+                        {(vessel.risk_score * 100).toFixed(1)}%
+                      </span>
+                      <div className="w-16 h-2 bg-gray-700 rounded-full overflow-hidden">
+                        <div 
+                          className={`h-full transition-all duration-300 ${
+                            vessel.risk_score < 0.3 ? 'bg-green-500' :
+                            vessel.risk_score < 0.7 ? 'bg-orange-500' :
+                            'bg-red-500'
+                          }`}
+                          style={{ width: `${vessel.risk_score * 100}%` }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
+                {vessel.risk_factors && Object.keys(vessel.risk_factors).length > 0 && (
+                  <div className="mt-3">
+                    <span className="text-gray-300 text-sm block mb-2">Risk Factors:</span>
+                    <div className="space-y-1 text-xs">
+                      {Object.entries(vessel.risk_factors).map(([key, value], index) => (
+                        <div key={index} className="flex justify-between text-gray-400">
+                          <span className="capitalize">{key.replace(/_/g, ' ')}:</span>
+                          <span className="text-white">{value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
           <div>
             <h4 className="text-sm font-medium text-gray-400 mb-2">LAST UPDATE</h4>
             <div className="flex items-center gap-2">

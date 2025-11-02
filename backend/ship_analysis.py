@@ -31,10 +31,10 @@ def eta_to_iso(eta_dict: Dict, reference: str) -> Optional[str]:
     except Exception:
         return None
 
-def assess_ship_docking(ship: ShipPositionData):
-    eta_dt = datetime.fromisoformat(eta_to_iso(ship.eta, ship.timestamp))
+def assess_ship_docking(eta: Dict):
+    timestamp = datetime.now().isoformat()
+    eta_dt = datetime.fromisoformat(eta_to_iso(eta,str(timestamp)))
     now = datetime.now()
-    
     # Only assess if ETA is within 5 days
     if eta_dt - now > timedelta(days=5):
         return "N/A", 0.0, {"Warning": "ETA beyond 5 days; no reliable forecast available for assesment"}
@@ -150,6 +150,14 @@ def calculate_risk(conditions: Dict) -> Tuple[float, Dict]:
     if 75 < cross_angle < 105:
         risk_score += 0.1
         risk_factors["cross_angle"] = "Dangerous cross-angle between wind and waves"
+
+    if risk_factors == {}:
+        risk_factors = {
+            "Status" : "All conditions within safe limits",
+            "Wind Speed" : conditions['wind_speed'],
+            "Wave Height" : conditions['wave_height'],
+            "Visibility" : conditions['visibility']
+        }
         
     return risk_score, risk_factors
 

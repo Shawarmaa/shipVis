@@ -3,7 +3,7 @@ import websockets
 import json
 from datetime import datetime, timezone
 import os
-
+from ship_analysis import assess_ship_docking
 from dotenv import load_dotenv
 from models import ShipPositionData
 load_dotenv()
@@ -46,13 +46,21 @@ async def predict_port_bound_ships(bounding_box: list[list[float]], port: str, f
                 user_id = static_data["UserID"]
                 ships_to_track.add(user_id)
                 
-                # Store static info
+                # Assess ship docking risk
+                print(static_data["Eta"])
+                status, risk_score, risk_factors = assess_ship_docking(static_data["Eta"])
+                print(status, risk_score, risk_factors)
+                
+                # Store static info including risk assessment
                 ship_static_info[user_id] = {
                     "name": static_data.get("Name", "Unknown"),
                     "call_sign": static_data.get("CallSign", ""),
                     "destination": destination,
                     "ship_type": static_data.get("Type", 0),
-                    "eta": static_data.get("Eta", None)
+                    "eta": static_data.get("Eta", None),
+                    "status": status,
+                    "risk_score": risk_score,
+                    "risk_factors": risk_factors
                 }
                 
                 print(f"Tracking ship: {static_data.get('Name', 'Unknown')} (MMSI: {user_id}) -> {destination}")
@@ -82,8 +90,10 @@ async def predict_port_bound_ships(bounding_box: list[list[float]], port: str, f
                     destination=ship_info.get("destination", port),
                     call_sign=ship_info.get("call_sign", ""),
                     ship_type=ship_info.get("ship_type", 0),
-                    eta=ship_info.get("eta", None)
-
+                    eta=ship_info.get("eta", None),
+                    status=ship_info.get("status", None),
+                    risk_score=ship_info.get("risk_score", None),
+                    risk_factors=ship_info.get("risk_factors", None)
                 )
                 
                 print(f"Position Update - {ship_name} (MMSI: {user_id}): Lat={ship_data.latitude}, Lon={ship_data.longitude}")
@@ -127,7 +137,7 @@ async def get_filtered_ships(bounding_box: list[list[float]]):
                     "ship_type": static_data.get("Type", 0)
                 }
                 
-                print(f"Tracking ship: {static_data.get('Name', 'Unknown')} (MMSI: {user_id}) - Length: {length}m")
+                # print(f"Tracking ship: {static_data.get('Name', 'Unknown')} (MMSI: {user_id}) - Length: {length}m")
             
             elif message_type == "PositionReport":
                 position_data = message["Message"]["PositionReport"]
@@ -174,7 +184,7 @@ async def get_all_ships(bounding_box: list[list[float]]):
         async for message_json in websocket:
             message = json.loads(message_json)
             position_data = message["Message"]["PositionReport"]
-            print(position_data)
+            # print(position_data)
             user_id = position_data["UserID"]
             ship_data = ShipPositionData(
                     mmsi=user_id,

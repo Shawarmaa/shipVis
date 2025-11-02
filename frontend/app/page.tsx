@@ -11,7 +11,7 @@ const NauticalMap = dynamic(() => import('@/components/NauticalMap'), {
 });
 
 export default function Home() {
-  const [allShipsEnabled, setAllShipsEnabled] = useState(true); // Start enabled
+  const [allShipsEnabled, setAllShipsEnabled] = useState(false); // Start enabled
   const { status, lastMessage, vessels, error } = useWebSocket('ws://localhost:8000/ws/all_ships', allShipsEnabled);
   const { 
     status: shipsStatus, 
