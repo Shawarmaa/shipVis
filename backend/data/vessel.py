@@ -10,7 +10,7 @@ load_dotenv()
 
 
 async def predict_port_bound_ships(bounding_box: list[list[float]], port: str, filter_ship_mmsi: list[str] = None,
-                             filter_message_types: list[str] = ["ShipStaticData", "PositionReport"], port: str):
+                             filter_message_types: list[str] = ["ShipStaticData", "PositionReport"]):
     """
     Async generator that yields ship position data for the given port.
     Yields dict with ship data including position, speed, course, etc.
