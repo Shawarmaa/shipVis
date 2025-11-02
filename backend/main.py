@@ -145,3 +145,19 @@ async def websocket_all_ships(websocket: WebSocket):
     except Exception as e:
         print(f"WebSocket error: {e}")
         await websocket.close()
+
+@app.websocket("/ws/filtered_ships")
+async def websocket_filtered_ships(websocket: WebSocket):
+    """
+    WebSocket endpoint that streams real-time position data for all ships in the bounding box.
+    Frontend connects to ws://localhost:8000/ws/filtered_ships to receive live updates.
+    """
+    await websocket.accept()
+    try:
+        async for ship_data in vessel.get_filtered_ships(bounding_box=[[-90, -180], [90, 180]]):
+            await websocket.send_json(ship_data)
+    except WebSocketDisconnect:
+        print("WebSocket client disconnected")
+    except Exception as e:
+        print(f"WebSocket error: {e}")
+        await websocket.close()
