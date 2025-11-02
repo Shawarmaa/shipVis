@@ -1,0 +1,4105 @@
+{
+    "hours": [
+        {
+            "currentDirection": {
+                "ecmwf": 236.56,
+                "fcoo": 45.0,
+                "metno": 76.82,
+                "meto": 214.64,
+                "sg": 76.82
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.02,
+                "meto": 0.16,
+                "sg": 0.02
+            },
+            "seaLevel": {
+                "meto": 0.18,
+                "sg": 0.18
+            },
+            "time": "2025-11-02T03:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 246.75,
+                "fcoo": 246.13,
+                "meteo": 243.01,
+                "metno": 255.33,
+                "noaa": 253.74,
+                "sg": 255.33
+            },
+            "waveHeight": {
+                "dwd": 1.5,
+                "ecmwf": 1.78,
+                "fcoo": 1.61,
+                "meteo": 1.67,
+                "metno": 1.64,
+                "noaa": 1.28,
+                "sg": 1.64
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 179.56,
+                "fcoo": 45.0,
+                "metno": 44.76,
+                "meto": 216.19,
+                "sg": 44.76
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.04,
+                "meto": 0.15,
+                "sg": 0.04
+            },
+            "seaLevel": {
+                "meto": 0.17,
+                "sg": 0.17
+            },
+            "time": "2025-11-02T04:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 247.36,
+                "fcoo": 245.62,
+                "meteo": 243.33,
+                "metno": 256.14,
+                "noaa": 254.63,
+                "sg": 256.14
+            },
+            "waveHeight": {
+                "dwd": 1.47,
+                "ecmwf": 1.7,
+                "fcoo": 1.57,
+                "meteo": 1.58,
+                "metno": 1.58,
+                "noaa": 1.23,
+                "sg": 1.58
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 122.56,
+                "fcoo": 45.0,
+                "metno": 38.63,
+                "meto": 214.67,
+                "sg": 38.63
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.04,
+                "meto": 0.14,
+                "sg": 0.04
+            },
+            "seaLevel": {
+                "meto": 0.15,
+                "sg": 0.15
+            },
+            "time": "2025-11-02T05:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 247.96,
+                "fcoo": 246.1,
+                "meteo": 243.66,
+                "metno": 256.32,
+                "noaa": 255.53,
+                "sg": 256.32
+            },
+            "waveHeight": {
+                "dwd": 1.37,
+                "ecmwf": 1.62,
+                "fcoo": 1.5,
+                "meteo": 1.5,
+                "metno": 1.49,
+                "noaa": 1.17,
+                "sg": 1.49
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 65.56,
+                "fcoo": 45.0,
+                "metno": 45.8,
+                "meto": 213.01,
+                "sg": 45.8
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.04,
+                "meto": 0.14,
+                "sg": 0.04
+            },
+            "seaLevel": {
+                "meto": 0.13,
+                "sg": 0.13
+            },
+            "time": "2025-11-02T06:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 248.57,
+                "fcoo": 244.7,
+                "meteo": 243.98,
+                "metno": 256.2,
+                "noaa": 256.42,
+                "sg": 256.2
+            },
+            "waveHeight": {
+                "dwd": 1.25,
+                "ecmwf": 1.55,
+                "fcoo": 1.41,
+                "meteo": 1.41,
+                "metno": 1.4,
+                "noaa": 1.12,
+                "sg": 1.4
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 30.61,
+                "fcoo": 45.0,
+                "metno": 73.85,
+                "meto": 212.5,
+                "sg": 73.85
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.02,
+                "meto": 0.14,
+                "sg": 0.02
+            },
+            "seaLevel": {
+                "meto": 0.1,
+                "sg": 0.1
+            },
+            "time": "2025-11-02T07:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 247.6,
+                "fcoo": 243.59,
+                "meteo": 242.83,
+                "metno": 256.14,
+                "noaa": 257.49,
+                "sg": 256.14
+            },
+            "waveHeight": {
+                "dwd": 1.11,
+                "ecmwf": 1.47,
+                "fcoo": 1.32,
+                "meteo": 1.35,
+                "metno": 1.31,
+                "noaa": 1.09,
+                "sg": 1.31
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 355.66,
+                "fcoo": 45.0,
+                "metno": 148.7,
+                "meto": 213.95,
+                "sg": 148.7
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.02,
+                "meto": 0.15,
+                "sg": 0.02
+            },
+            "seaLevel": {
+                "meto": 0.11,
+                "sg": 0.11
+            },
+            "time": "2025-11-02T08:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 246.64,
+                "fcoo": 242.03,
+                "meteo": 241.67,
+                "metno": 256.21,
+                "noaa": 258.56,
+                "sg": 256.21
+            },
+            "waveHeight": {
+                "dwd": 0.99,
+                "ecmwf": 1.39,
+                "fcoo": 1.23,
+                "meteo": 1.28,
+                "metno": 1.23,
+                "noaa": 1.06,
+                "sg": 1.23
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 320.71,
+                "fcoo": 45.0,
+                "metno": 177.39,
+                "meto": 212.01,
+                "sg": 177.39
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.05,
+                "meto": 0.16,
+                "sg": 0.05
+            },
+            "seaLevel": {
+                "meto": 0.13,
+                "sg": 0.13
+            },
+            "time": "2025-11-02T09:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 245.67,
+                "fcoo": 239.6,
+                "meteo": 240.52,
+                "metno": 256.32,
+                "noaa": 259.63,
+                "sg": 256.32
+            },
+            "waveHeight": {
+                "dwd": 0.94,
+                "ecmwf": 1.31,
+                "fcoo": 1.14,
+                "meteo": 1.22,
+                "metno": 1.16,
+                "noaa": 1.03,
+                "sg": 1.16
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 308.49,
+                "fcoo": 45.0,
+                "metno": 184.17,
+                "meto": 211.81,
+                "sg": 184.17
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.07,
+                "meto": 0.15,
+                "sg": 0.07
+            },
+            "seaLevel": {
+                "meto": 0.13,
+                "sg": 0.13
+            },
+            "time": "2025-11-02T10:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 243.59,
+                "fcoo": 237.04,
+                "meteo": 238.43,
+                "metno": 255.99,
+                "noaa": 258.64,
+                "sg": 255.99
+            },
+            "waveHeight": {
+                "dwd": 0.92,
+                "ecmwf": 1.31,
+                "fcoo": 1.07,
+                "meteo": 1.22,
+                "metno": 1.1,
+                "noaa": 1.07,
+                "sg": 1.1
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 296.26,
+                "fcoo": 45.0,
+                "metno": 186.16,
+                "meto": 212.19,
+                "sg": 186.16
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.08,
+                "meto": 0.14,
+                "sg": 0.08
+            },
+            "seaLevel": {
+                "meto": 0.14,
+                "sg": 0.14
+            },
+            "time": "2025-11-02T11:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 241.51,
+                "fcoo": 235.44,
+                "meteo": 236.35,
+                "metno": 255.52,
+                "noaa": 257.65,
+                "sg": 255.52
+            },
+            "waveHeight": {
+                "dwd": 0.92,
+                "ecmwf": 1.31,
+                "fcoo": 1.0,
+                "meteo": 1.21,
+                "metno": 1.08,
+                "noaa": 1.11,
+                "sg": 1.08
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 284.04,
+                "fcoo": 45.0,
+                "metno": 186.8,
+                "meto": 210.31,
+                "sg": 186.8
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.09,
+                "meto": 0.13,
+                "sg": 0.09
+            },
+            "seaLevel": {
+                "meto": 0.13,
+                "sg": 0.13
+            },
+            "time": "2025-11-02T12:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 239.42,
+                "fcoo": 232.79,
+                "meteo": 234.26,
+                "metno": 254.91,
+                "noaa": 256.66,
+                "sg": 254.91
+            },
+            "waveHeight": {
+                "dwd": 0.91,
+                "ecmwf": 1.3,
+                "fcoo": 0.97,
+                "meteo": 1.21,
+                "metno": 1.08,
+                "noaa": 1.15,
+                "sg": 1.08
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 232.52,
+                "fcoo": 45.0,
+                "metno": 187.27,
+                "meto": 209.65,
+                "sg": 187.27
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.06,
+                "meto": 0.13,
+                "sg": 0.06
+            },
+            "seaLevel": {
+                "meto": 0.11,
+                "sg": 0.11
+            },
+            "time": "2025-11-02T13:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 238.53,
+                "fcoo": 231.95,
+                "meteo": 234.17,
+                "metno": 254.28,
+                "noaa": 255.13,
+                "sg": 254.28
+            },
+            "waveHeight": {
+                "dwd": 0.95,
+                "ecmwf": 1.36,
+                "fcoo": 0.98,
+                "meteo": 1.23,
+                "metno": 1.11,
+                "noaa": 1.23,
+                "sg": 1.11
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 180.99,
+                "fcoo": 45.0,
+                "metno": 183.27,
+                "meto": 210.41,
+                "sg": 183.27
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.03,
+                "meto": 0.13,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": 0.08,
+                "sg": 0.08
+            },
+            "time": "2025-11-02T14:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 237.64,
+                "fcoo": 237.22,
+                "meteo": 234.09,
+                "metno": 253.74,
+                "noaa": 253.6,
+                "sg": 253.74
+            },
+            "waveHeight": {
+                "dwd": 0.95,
+                "ecmwf": 1.41,
+                "fcoo": 1.11,
+                "meteo": 1.26,
+                "metno": 1.14,
+                "noaa": 1.31,
+                "sg": 1.14
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 129.47,
+                "fcoo": 45.0,
+                "metno": 58.53,
+                "meto": 207.56,
+                "sg": 58.53
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.0,
+                "meto": 0.11,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": 0.04,
+                "sg": 0.04
+            },
+            "time": "2025-11-02T15:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 236.75,
+                "fcoo": 246.74,
+                "meteo": 234.0,
+                "metno": 253.13,
+                "noaa": 252.07,
+                "sg": 253.13
+            },
+            "waveHeight": {
+                "dwd": 0.93,
+                "ecmwf": 1.46,
+                "fcoo": 1.34,
+                "meteo": 1.28,
+                "metno": 1.18,
+                "noaa": 1.39,
+                "sg": 1.18
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 103.81,
+                "fcoo": 45.0,
+                "metno": 16.39,
+                "meto": 206.48,
+                "sg": 16.39
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.03,
+                "meto": 0.09,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": -0.01,
+                "sg": -0.01
+            },
+            "time": "2025-11-02T16:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 240.47,
+                "fcoo": 252.61,
+                "meteo": 237.36,
+                "metno": 254.31,
+                "noaa": 254.04,
+                "sg": 254.31
+            },
+            "waveHeight": {
+                "dwd": 1.06,
+                "ecmwf": 1.37,
+                "fcoo": 1.37,
+                "meteo": 1.25,
+                "metno": 1.16,
+                "noaa": 1.35,
+                "sg": 1.16
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 78.16,
+                "fcoo": 45.0,
+                "metno": 9.93,
+                "meto": 214.53,
+                "sg": 9.93
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.04,
+                "meto": 0.08,
+                "sg": 0.04
+            },
+            "seaLevel": {
+                "meto": -0.06,
+                "sg": -0.06
+            },
+            "time": "2025-11-02T17:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 244.19,
+                "fcoo": 256.89,
+                "meteo": 240.72,
+                "metno": 255.65,
+                "noaa": 256.02,
+                "sg": 255.65
+            },
+            "waveHeight": {
+                "dwd": 1.08,
+                "ecmwf": 1.29,
+                "fcoo": 1.32,
+                "meteo": 1.21,
+                "metno": 1.11,
+                "noaa": 1.31,
+                "sg": 1.11
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 52.5,
+                "fcoo": 45.0,
+                "metno": 12.22,
+                "meto": 224.05,
+                "sg": 12.22
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.05,
+                "meto": 0.07,
+                "sg": 0.05
+            },
+            "seaLevel": {
+                "meto": -0.09,
+                "sg": -0.09
+            },
+            "time": "2025-11-02T18:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 247.92,
+                "fcoo": 261.14,
+                "meteo": 244.08,
+                "metno": 257.05,
+                "noaa": 257.99,
+                "sg": 257.05
+            },
+            "waveHeight": {
+                "dwd": 0.95,
+                "ecmwf": 1.2,
+                "fcoo": 1.3,
+                "meteo": 1.18,
+                "metno": 1.06,
+                "noaa": 1.27,
+                "sg": 1.06
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 51.04,
+                "fcoo": 45.0,
+                "metno": 13.75,
+                "meto": 227.44,
+                "sg": 13.75
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.05,
+                "meto": 0.07,
+                "sg": 0.05
+            },
+            "seaLevel": {
+                "meto": -0.1,
+                "sg": -0.1
+            },
+            "time": "2025-11-02T19:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 255.61,
+                "fcoo": 264.43,
+                "meteo": 250.43,
+                "metno": 259.97,
+                "noaa": 261.7,
+                "sg": 259.97
+            },
+            "waveHeight": {
+                "dwd": 0.87,
+                "ecmwf": 1.21,
+                "fcoo": 1.32,
+                "meteo": 1.17,
+                "metno": 1.03,
+                "noaa": 1.27,
+                "sg": 1.03
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 49.58,
+                "fcoo": 45.0,
+                "metno": 14.79,
+                "meto": 233.04,
+                "sg": 14.79
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.01,
+                "meto": 0.08,
+                "sg": 0.01
+            },
+            "seaLevel": {
+                "meto": -0.08,
+                "sg": -0.08
+            },
+            "time": "2025-11-02T20:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 263.3,
+                "fcoo": 266.76,
+                "meteo": 256.78,
+                "metno": 264.14,
+                "noaa": 265.4,
+                "sg": 264.14
+            },
+            "waveHeight": {
+                "dwd": 0.9,
+                "ecmwf": 1.22,
+                "fcoo": 1.37,
+                "meteo": 1.17,
+                "metno": 1.06,
+                "noaa": 1.28,
+                "sg": 1.06
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 48.12,
+                "fcoo": 45.0,
+                "metno": 195.02,
+                "meto": 232.35,
+                "sg": 195.02
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.03,
+                "meto": 0.07,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": -0.03,
+                "sg": -0.03
+            },
+            "time": "2025-11-02T21:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 270.99,
+                "fcoo": 268.87,
+                "meteo": 263.13,
+                "metno": 269.27,
+                "noaa": 269.11,
+                "sg": 269.27
+            },
+            "waveHeight": {
+                "dwd": 0.98,
+                "ecmwf": 1.22,
+                "fcoo": 1.41,
+                "meteo": 1.16,
+                "metno": 1.12,
+                "noaa": 1.28,
+                "sg": 1.12
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 8.22,
+                "fcoo": 45.0,
+                "metno": 194.06,
+                "meto": 226.76,
+                "sg": 194.06
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.06,
+                "meto": 0.07,
+                "sg": 0.06
+            },
+            "seaLevel": {
+                "meto": -0.01,
+                "sg": -0.01
+            },
+            "time": "2025-11-02T22:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 271.98,
+                "fcoo": 270.3,
+                "meteo": 265.0,
+                "metno": 272.92,
+                "noaa": 271.63,
+                "sg": 272.92
+            },
+            "waveHeight": {
+                "dwd": 0.99,
+                "ecmwf": 1.26,
+                "fcoo": 1.45,
+                "meteo": 1.16,
+                "metno": 1.17,
+                "noaa": 1.26,
+                "sg": 1.17
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 328.33,
+                "fcoo": 45.0,
+                "metno": 193.17,
+                "meto": 226.62,
+                "sg": 193.17
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.07,
+                "meto": 0.07,
+                "sg": 0.07
+            },
+            "seaLevel": {
+                "meto": -0.01,
+                "sg": -0.01
+            },
+            "time": "2025-11-02T23:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 272.97,
+                "fcoo": 269.93,
+                "meteo": 266.88,
+                "metno": 274.71,
+                "noaa": 274.16,
+                "sg": 274.71
+            },
+            "waveHeight": {
+                "dwd": 0.99,
+                "ecmwf": 1.3,
+                "fcoo": 1.49,
+                "meteo": 1.15,
+                "metno": 1.18,
+                "noaa": 1.25,
+                "sg": 1.18
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 288.43,
+                "fcoo": 45.0,
+                "metno": 192.02,
+                "meto": 228.33,
+                "sg": 192.02
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.06,
+                "meto": 0.06,
+                "sg": 0.06
+            },
+            "seaLevel": {
+                "meto": -0.01,
+                "sg": -0.01
+            },
+            "time": "2025-11-03T00:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 273.96,
+                "fcoo": 269.08,
+                "meteo": 268.75,
+                "metno": 275.59,
+                "noaa": 276.68,
+                "sg": 275.59
+            },
+            "waveHeight": {
+                "dwd": 1.03,
+                "ecmwf": 1.34,
+                "fcoo": 1.55,
+                "meteo": 1.15,
+                "metno": 1.17,
+                "noaa": 1.23,
+                "sg": 1.17
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 242.37,
+                "fcoo": 45.0,
+                "metno": 190.77,
+                "meto": 228.19,
+                "sg": 190.77
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.07,
+                "meto": 0.05,
+                "sg": 0.07
+            },
+            "seaLevel": {
+                "meto": 0.0,
+                "sg": 0.0
+            },
+            "time": "2025-11-03T01:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 271.69,
+                "fcoo": 267.98,
+                "meteo": 267.09,
+                "metno": 276.0,
+                "noaa": 274.98,
+                "sg": 276.0
+            },
+            "waveHeight": {
+                "dwd": 1.06,
+                "ecmwf": 1.32,
+                "fcoo": 1.58,
+                "meteo": 1.14,
+                "metno": 1.14,
+                "noaa": 1.23,
+                "sg": 1.14
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 196.32,
+                "fcoo": 45.0,
+                "metno": 189.35,
+                "meto": 228.45,
+                "sg": 189.35
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.03,
+                "meto": 0.05,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": 0.01,
+                "sg": 0.01
+            },
+            "time": "2025-11-03T02:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 269.43,
+                "fcoo": 265.23,
+                "meteo": 265.43,
+                "metno": 275.69,
+                "noaa": 273.27,
+                "sg": 275.69
+            },
+            "waveHeight": {
+                "dwd": 1.06,
+                "ecmwf": 1.3,
+                "fcoo": 1.56,
+                "meteo": 1.12,
+                "metno": 1.12,
+                "noaa": 1.23,
+                "sg": 1.12
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 150.26,
+                "fcoo": 45.0,
+                "metno": 45.63,
+                "meto": 228.32,
+                "sg": 45.63
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.01,
+                "meto": 0.06,
+                "sg": 0.01
+            },
+            "seaLevel": {
+                "meto": 0.04,
+                "sg": 0.04
+            },
+            "time": "2025-11-03T03:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 267.17,
+                "fcoo": 260.51,
+                "meteo": 263.77,
+                "metno": 273.97,
+                "noaa": 271.57,
+                "sg": 273.97
+            },
+            "waveHeight": {
+                "dwd": 1.05,
+                "ecmwf": 1.28,
+                "fcoo": 1.54,
+                "meteo": 1.11,
+                "metno": 1.11,
+                "noaa": 1.23,
+                "sg": 1.11
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 106.32,
+                "fcoo": 45.0,
+                "metno": 21.54,
+                "meto": 220.37,
+                "sg": 21.54
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.03,
+                "meto": 0.07,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": 0.06,
+                "sg": 0.06
+            },
+            "time": "2025-11-03T04:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 261.87,
+                "fcoo": 254.29,
+                "meteo": 260.02,
+                "metno": 271.33,
+                "noaa": 267.85,
+                "sg": 271.33
+            },
+            "waveHeight": {
+                "dwd": 1.01,
+                "ecmwf": 1.32,
+                "fcoo": 1.52,
+                "meteo": 1.1,
+                "metno": 1.1,
+                "noaa": 1.26,
+                "sg": 1.1
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 62.37,
+                "fcoo": 45.0,
+                "metno": 19.02,
+                "meto": 219.35,
+                "sg": 19.02
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.05,
+                "meto": 0.08,
+                "sg": 0.05
+            },
+            "seaLevel": {
+                "meto": 0.07,
+                "sg": 0.07
+            },
+            "time": "2025-11-03T05:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 256.58,
+                "fcoo": 249.35,
+                "meteo": 256.27,
+                "metno": 268.38,
+                "noaa": 264.12,
+                "sg": 268.38
+            },
+            "waveHeight": {
+                "dwd": 0.96,
+                "ecmwf": 1.37,
+                "fcoo": 1.49,
+                "meteo": 1.09,
+                "metno": 1.08,
+                "noaa": 1.3,
+                "sg": 1.08
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 18.43,
+                "fcoo": 45.0,
+                "metno": 22.12,
+                "meto": 219.21,
+                "sg": 22.12
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.06,
+                "meto": 0.09,
+                "sg": 0.06
+            },
+            "seaLevel": {
+                "meto": 0.1,
+                "sg": 0.1
+            },
+            "time": "2025-11-03T06:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 251.28,
+                "fcoo": 245.79,
+                "meteo": 252.52,
+                "metno": 264.62,
+                "noaa": 260.4,
+                "sg": 264.62
+            },
+            "waveHeight": {
+                "dwd": 0.93,
+                "ecmwf": 1.42,
+                "fcoo": 1.45,
+                "meteo": 1.08,
+                "metno": 1.08,
+                "noaa": 1.33,
+                "sg": 1.08
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 42.29,
+                "fcoo": 45.0,
+                "metno": 26.97,
+                "meto": 215.69,
+                "sg": 26.97
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.04,
+                "meto": 0.11,
+                "sg": 0.04
+            },
+            "seaLevel": {
+                "meto": 0.14,
+                "sg": 0.14
+            },
+            "time": "2025-11-03T07:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 247.71,
+                "fcoo": 242.81,
+                "meteo": 247.65,
+                "metno": 260.63,
+                "noaa": 256.64,
+                "sg": 260.63
+            },
+            "waveHeight": {
+                "dwd": 0.95,
+                "ecmwf": 1.39,
+                "fcoo": 1.39,
+                "meteo": 1.16,
+                "metno": 1.09,
+                "noaa": 1.41,
+                "sg": 1.09
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 66.14,
+                "fcoo": 45.0,
+                "metno": 41.53,
+                "meto": 217.61,
+                "sg": 41.53
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.02,
+                "meto": 0.13,
+                "sg": 0.02
+            },
+            "seaLevel": {
+                "meto": 0.17,
+                "sg": 0.17
+            },
+            "time": "2025-11-03T08:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 244.14,
+                "fcoo": 239.94,
+                "meteo": 242.77,
+                "metno": 257.06,
+                "noaa": 252.89,
+                "sg": 257.06
+            },
+            "waveHeight": {
+                "dwd": 1.06,
+                "ecmwf": 1.37,
+                "fcoo": 1.36,
+                "meteo": 1.24,
+                "metno": 1.12,
+                "noaa": 1.49,
+                "sg": 1.12
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 90.0,
+                "fcoo": 45.0,
+                "metno": 158.05,
+                "meto": 218.3,
+                "sg": 158.05
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.01,
+                "meto": 0.16,
+                "sg": 0.01
+            },
+            "seaLevel": {
+                "meto": 0.22,
+                "sg": 0.22
+            },
+            "time": "2025-11-03T09:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 240.56,
+                "fcoo": 238.07,
+                "meteo": 237.9,
+                "metno": 254.14,
+                "noaa": 249.13,
+                "sg": 254.14
+            },
+            "waveHeight": {
+                "dwd": 1.33,
+                "ecmwf": 1.35,
+                "fcoo": 1.36,
+                "meteo": 1.32,
+                "metno": 1.17,
+                "noaa": 1.57,
+                "sg": 1.17
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 90.0,
+                "fcoo": 45.0,
+                "metno": 185.43,
+                "meto": 215.77,
+                "sg": 185.43
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.05,
+                "meto": 0.17,
+                "sg": 0.05
+            },
+            "seaLevel": {
+                "meto": 0.26,
+                "sg": 0.26
+            },
+            "time": "2025-11-03T10:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 238.7,
+                "fcoo": 237.89,
+                "meteo": 236.49,
+                "metno": 252.11,
+                "noaa": 249.37,
+                "sg": 252.11
+            },
+            "waveHeight": {
+                "dwd": 1.52,
+                "ecmwf": 1.43,
+                "fcoo": 1.43,
+                "meteo": 1.32,
+                "metno": 1.24,
+                "noaa": 1.65,
+                "sg": 1.24
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 90.0,
+                "fcoo": 45.0,
+                "metno": 188.08,
+                "meto": 213.97,
+                "sg": 188.08
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.08,
+                "meto": 0.16,
+                "sg": 0.08
+            },
+            "seaLevel": {
+                "meto": 0.26,
+                "sg": 0.26
+            },
+            "time": "2025-11-03T11:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 236.83,
+                "fcoo": 239.8,
+                "meteo": 235.08,
+                "metno": 251.7,
+                "noaa": 249.61,
+                "sg": 251.7
+            },
+            "waveHeight": {
+                "dwd": 1.54,
+                "ecmwf": 1.5,
+                "fcoo": 1.59,
+                "meteo": 1.31,
+                "metno": 1.27,
+                "noaa": 1.72,
+                "sg": 1.27
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 90.0,
+                "fcoo": 45.0,
+                "metno": 189.11,
+                "meto": 213.9,
+                "sg": 189.11
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "fcoo": 7274.61,
+                "metno": 0.08,
+                "meto": 0.14,
+                "sg": 0.08
+            },
+            "seaLevel": {
+                "meto": 0.23,
+                "sg": 0.23
+            },
+            "time": "2025-11-03T12:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 234.96,
+                "fcoo": 241.72,
+                "meteo": 233.67,
+                "metno": 252.72,
+                "noaa": 249.85,
+                "sg": 252.72
+            },
+            "waveHeight": {
+                "dwd": 1.6,
+                "ecmwf": 1.58,
+                "fcoo": 1.73,
+                "meteo": 1.31,
+                "metno": 1.28,
+                "noaa": 1.8,
+                "sg": 1.28
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 78.66,
+                "metno": 188.24,
+                "meto": 214.22,
+                "sg": 188.24
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.09,
+                "meto": 0.14,
+                "sg": 0.09
+            },
+            "seaLevel": {
+                "meto": 0.18,
+                "sg": 0.18
+            },
+            "time": "2025-11-03T13:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 236.04,
+                "fcoo": 243.41,
+                "meteo": 233.63,
+                "metno": 253.45,
+                "noaa": 249.54,
+                "sg": 253.45
+            },
+            "waveHeight": {
+                "dwd": 1.69,
+                "ecmwf": 1.66,
+                "fcoo": 1.88,
+                "meteo": 1.42,
+                "metno": 1.31,
+                "noaa": 1.84,
+                "sg": 1.31
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 67.32,
+                "metno": 188.06,
+                "meto": 213.96,
+                "sg": 188.06
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.06,
+                "meto": 0.13,
+                "sg": 0.06
+            },
+            "seaLevel": {
+                "meto": 0.12,
+                "sg": 0.12
+            },
+            "time": "2025-11-03T14:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 237.12,
+                "fcoo": 243.97,
+                "meteo": 233.6,
+                "metno": 253.32,
+                "noaa": 249.23,
+                "sg": 253.32
+            },
+            "waveHeight": {
+                "dwd": 1.7,
+                "ecmwf": 1.75,
+                "fcoo": 1.92,
+                "meteo": 1.52,
+                "metno": 1.42,
+                "noaa": 1.88,
+                "sg": 1.42
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 55.98,
+                "metno": 179.82,
+                "meto": 214.32,
+                "sg": 179.82
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.02,
+                "meto": 0.12,
+                "sg": 0.02
+            },
+            "seaLevel": {
+                "meto": 0.07,
+                "sg": 0.07
+            },
+            "time": "2025-11-03T15:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 238.2,
+                "fcoo": 244.06,
+                "meteo": 233.56,
+                "metno": 252.59,
+                "noaa": 248.92,
+                "sg": 252.59
+            },
+            "waveHeight": {
+                "dwd": 1.74,
+                "ecmwf": 1.83,
+                "fcoo": 1.88,
+                "meteo": 1.63,
+                "metno": 1.6,
+                "noaa": 1.92,
+                "sg": 1.6
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 73.2,
+                "metno": 35.1,
+                "meto": 214.32,
+                "sg": 35.1
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.01,
+                "meto": 0.12,
+                "sg": 0.01
+            },
+            "seaLevel": {
+                "meto": 0.03,
+                "sg": 0.03
+            },
+            "time": "2025-11-03T16:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 237.81,
+                "fcoo": 243.79,
+                "meteo": 233.72,
+                "metno": 252.47,
+                "noaa": 248.52,
+                "sg": 252.47
+            },
+            "waveHeight": {
+                "dwd": 1.7,
+                "ecmwf": 1.83,
+                "fcoo": 1.81,
+                "meteo": 1.63,
+                "metno": 1.7,
+                "noaa": 1.92,
+                "sg": 1.7
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 90.43,
+                "metno": 16.92,
+                "meto": 211.72,
+                "sg": 16.92
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.05,
+                "meto": 0.12,
+                "sg": 0.05
+            },
+            "seaLevel": {
+                "meto": -0.02,
+                "sg": -0.02
+            },
+            "time": "2025-11-03T17:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 237.41,
+                "fcoo": 242.35,
+                "meteo": 233.87,
+                "metno": 252.2,
+                "noaa": 248.11,
+                "sg": 252.2
+            },
+            "waveHeight": {
+                "dwd": 1.6,
+                "ecmwf": 1.83,
+                "fcoo": 1.74,
+                "meteo": 1.63,
+                "metno": 1.69,
+                "noaa": 1.92,
+                "sg": 1.69
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 107.65,
+                "metno": 18.52,
+                "meto": 210.19,
+                "sg": 18.52
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.05,
+                "meto": 0.1,
+                "sg": 0.05
+            },
+            "seaLevel": {
+                "meto": -0.09,
+                "sg": -0.09
+            },
+            "time": "2025-11-03T18:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 237.02,
+                "fcoo": 242.01,
+                "meteo": 234.03,
+                "metno": 251.85,
+                "noaa": 247.71,
+                "sg": 251.85
+            },
+            "waveHeight": {
+                "dwd": 1.56,
+                "ecmwf": 1.82,
+                "fcoo": 1.72,
+                "meteo": 1.63,
+                "metno": 1.67,
+                "noaa": 1.92,
+                "sg": 1.67
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 49.56,
+                "metno": 23.08,
+                "meto": 211.34,
+                "sg": 23.08
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.05,
+                "meto": 0.1,
+                "sg": 0.05
+            },
+            "seaLevel": {
+                "meto": -0.15,
+                "sg": -0.15
+            },
+            "time": "2025-11-03T19:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 237.18,
+                "meteo": 233.83,
+                "metno": 251.24,
+                "noaa": 248.31,
+                "sg": 251.24
+            },
+            "waveHeight": {
+                "dwd": 1.51,
+                "ecmwf": 1.78,
+                "meteo": 1.6,
+                "metno": 1.62,
+                "noaa": 1.86,
+                "sg": 1.62
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 351.46,
+                "metno": 23.71,
+                "meto": 212.56,
+                "sg": 23.71
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.05,
+                "meto": 0.09,
+                "sg": 0.05
+            },
+            "seaLevel": {
+                "meto": -0.18,
+                "sg": -0.18
+            },
+            "time": "2025-11-03T20:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 237.33,
+                "meteo": 233.64,
+                "metno": 250.75,
+                "noaa": 248.9,
+                "sg": 250.75
+            },
+            "waveHeight": {
+                "dwd": 1.45,
+                "ecmwf": 1.73,
+                "meteo": 1.56,
+                "metno": 1.57,
+                "noaa": 1.79,
+                "sg": 1.57
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 293.37,
+                "metno": 59.26,
+                "meto": 212.85,
+                "sg": 59.26
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.01,
+                "meto": 0.09,
+                "sg": 0.01
+            },
+            "seaLevel": {
+                "meto": -0.21,
+                "sg": -0.21
+            },
+            "time": "2025-11-03T21:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 237.49,
+                "meteo": 233.44,
+                "metno": 250.66,
+                "noaa": 249.5,
+                "sg": 250.66
+            },
+            "waveHeight": {
+                "dwd": 1.33,
+                "ecmwf": 1.68,
+                "meteo": 1.53,
+                "metno": 1.54,
+                "noaa": 1.73,
+                "sg": 1.54
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 275.16,
+                "metno": 178.33,
+                "meto": 213.66,
+                "sg": 178.33
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.03,
+                "meto": 0.08,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": -0.22,
+                "sg": -0.22
+            },
+            "time": "2025-11-03T22:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 237.28,
+                "meteo": 233.16,
+                "metno": 250.94,
+                "noaa": 249.69,
+                "sg": 250.94
+            },
+            "waveHeight": {
+                "dwd": 1.23,
+                "ecmwf": 1.64,
+                "meteo": 1.49,
+                "metno": 1.5,
+                "noaa": 1.65,
+                "sg": 1.5
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 256.95,
+                "metno": 185.0,
+                "meto": 212.9,
+                "sg": 185.0
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.07,
+                "meto": 0.07,
+                "sg": 0.07
+            },
+            "seaLevel": {
+                "meto": -0.23,
+                "sg": -0.23
+            },
+            "time": "2025-11-03T23:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 237.07,
+                "meteo": 232.88,
+                "metno": 251.65,
+                "noaa": 249.88,
+                "sg": 251.65
+            },
+            "waveHeight": {
+                "dwd": 1.15,
+                "ecmwf": 1.6,
+                "meteo": 1.44,
+                "metno": 1.46,
+                "noaa": 1.56,
+                "sg": 1.46
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 238.74,
+                "metno": 183.5,
+                "meto": 212.49,
+                "sg": 183.5
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.08,
+                "meto": 0.06,
+                "sg": 0.08
+            },
+            "seaLevel": {
+                "meto": -0.24,
+                "sg": -0.24
+            },
+            "time": "2025-11-04T00:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 236.86,
+                "meteo": 232.6,
+                "metno": 252.55,
+                "noaa": 250.07,
+                "sg": 252.55
+            },
+            "waveHeight": {
+                "dwd": 1.12,
+                "ecmwf": 1.56,
+                "meteo": 1.4,
+                "metno": 1.39,
+                "noaa": 1.48,
+                "sg": 1.39
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 187.78,
+                "metno": 182.48,
+                "meto": 215.26,
+                "sg": 182.48
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.06,
+                "meto": 0.05,
+                "sg": 0.06
+            },
+            "seaLevel": {
+                "meto": -0.24,
+                "sg": -0.24
+            },
+            "time": "2025-11-04T01:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 236.97,
+                "meteo": 232.8,
+                "metno": 253.42,
+                "noaa": 250.47,
+                "sg": 253.42
+            },
+            "waveHeight": {
+                "dwd": 1.12,
+                "ecmwf": 1.51,
+                "meteo": 1.36,
+                "metno": 1.31,
+                "noaa": 1.41,
+                "sg": 1.31
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 136.82,
+                "metno": 184.57,
+                "meto": 216.51,
+                "sg": 184.57
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.07,
+                "meto": 0.05,
+                "sg": 0.07
+            },
+            "seaLevel": {
+                "meto": -0.22,
+                "sg": -0.22
+            },
+            "time": "2025-11-04T02:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 237.08,
+                "meteo": 233.0,
+                "metno": 254.05,
+                "noaa": 250.86,
+                "sg": 254.05
+            },
+            "waveHeight": {
+                "dwd": 1.09,
+                "ecmwf": 1.46,
+                "meteo": 1.32,
+                "metno": 1.24,
+                "noaa": 1.33,
+                "sg": 1.24
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 85.86,
+                "metno": 178.74,
+                "meto": 216.57,
+                "sg": 178.74
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.03,
+                "meto": 0.04,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": -0.19,
+                "sg": -0.19
+            },
+            "time": "2025-11-04T03:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 237.19,
+                "meteo": 233.2,
+                "metno": 254.54,
+                "noaa": 251.26,
+                "sg": 254.54
+            },
+            "waveHeight": {
+                "dwd": 1.03,
+                "ecmwf": 1.41,
+                "meteo": 1.28,
+                "metno": 1.19,
+                "noaa": 1.26,
+                "sg": 1.19
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 27.46,
+                "metno": 52.98,
+                "meto": 214.51,
+                "sg": 52.98
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.01,
+                "meto": 0.04,
+                "sg": 0.01
+            },
+            "seaLevel": {
+                "meto": -0.16,
+                "sg": -0.16
+            },
+            "time": "2025-11-04T04:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 236.88,
+                "meteo": 233.0,
+                "metno": 254.78,
+                "noaa": 250.8,
+                "sg": 254.78
+            },
+            "waveHeight": {
+                "dwd": 0.99,
+                "ecmwf": 1.37,
+                "meteo": 1.25,
+                "metno": 1.15,
+                "noaa": 1.24,
+                "sg": 1.15
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 329.07,
+                "metno": 16.93,
+                "meto": 213.46,
+                "sg": 16.93
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.06,
+                "meto": 0.04,
+                "sg": 0.06
+            },
+            "seaLevel": {
+                "meto": -0.13,
+                "sg": -0.13
+            },
+            "time": "2025-11-04T05:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 236.58,
+                "meteo": 232.79,
+                "metno": 254.88,
+                "noaa": 250.35,
+                "sg": 254.88
+            },
+            "waveHeight": {
+                "dwd": 0.96,
+                "ecmwf": 1.33,
+                "meteo": 1.22,
+                "metno": 1.11,
+                "noaa": 1.22,
+                "sg": 1.11
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 270.67,
+                "metno": 14.36,
+                "meto": 216.78,
+                "sg": 14.36
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.09,
+                "meto": 0.05,
+                "sg": 0.09
+            },
+            "seaLevel": {
+                "meto": -0.08,
+                "sg": -0.08
+            },
+            "time": "2025-11-04T06:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 236.27,
+                "meteo": 232.59,
+                "metno": 254.73,
+                "noaa": 249.89,
+                "sg": 254.73
+            },
+            "waveHeight": {
+                "dwd": 0.94,
+                "ecmwf": 1.28,
+                "meteo": 1.19,
+                "metno": 1.08,
+                "noaa": 1.2,
+                "sg": 1.08
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 251.79,
+                "metno": 18.68,
+                "meto": 214.89,
+                "sg": 18.68
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.06,
+                "meto": 0.06,
+                "sg": 0.06
+            },
+            "seaLevel": {
+                "meto": -0.03,
+                "sg": -0.03
+            },
+            "time": "2025-11-04T07:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 235.62,
+                "meteo": 231.32,
+                "metno": 253.74,
+                "noaa": 249.75,
+                "sg": 253.74
+            },
+            "waveHeight": {
+                "dwd": 0.93,
+                "ecmwf": 1.28,
+                "meteo": 1.22,
+                "metno": 1.06,
+                "noaa": 1.21,
+                "sg": 1.06
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 232.9,
+                "metno": 16.05,
+                "meto": 214.52,
+                "sg": 16.05
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.07,
+                "meto": 0.07,
+                "sg": 0.07
+            },
+            "seaLevel": {
+                "meto": 0.01,
+                "sg": 0.01
+            },
+            "time": "2025-11-04T08:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 234.96,
+                "meteo": 230.04,
+                "metno": 252.24,
+                "noaa": 249.62,
+                "sg": 252.24
+            },
+            "waveHeight": {
+                "dwd": 0.92,
+                "ecmwf": 1.28,
+                "meteo": 1.26,
+                "metno": 1.06,
+                "noaa": 1.23,
+                "sg": 1.06
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 214.02,
+                "metno": 17.91,
+                "meto": 213.65,
+                "sg": 17.91
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.03,
+                "meto": 0.08,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": 0.06,
+                "sg": 0.06
+            },
+            "time": "2025-11-04T09:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 234.3,
+                "meteo": 228.77,
+                "metno": 250.91,
+                "noaa": 249.48,
+                "sg": 250.91
+            },
+            "waveHeight": {
+                "dwd": 0.88,
+                "ecmwf": 1.28,
+                "meteo": 1.29,
+                "metno": 1.1,
+                "noaa": 1.24,
+                "sg": 1.1
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 219.01,
+                "metno": 185.4,
+                "meto": 209.98,
+                "sg": 185.4
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.01,
+                "meto": 0.08,
+                "sg": 0.01
+            },
+            "seaLevel": {
+                "meto": 0.09,
+                "sg": 0.09
+            },
+            "time": "2025-11-04T10:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 233.93,
+                "meteo": 228.22,
+                "metno": 250.3,
+                "noaa": 249.29,
+                "sg": 250.3
+            },
+            "waveHeight": {
+                "dwd": 0.84,
+                "ecmwf": 1.26,
+                "meteo": 1.25,
+                "metno": 1.15,
+                "noaa": 1.21,
+                "sg": 1.15
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 224.0,
+                "metno": 192.75,
+                "meto": 204.71,
+                "sg": 192.75
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.05,
+                "meto": 0.08,
+                "sg": 0.05
+            },
+            "seaLevel": {
+                "meto": 0.1,
+                "sg": 0.1
+            },
+            "time": "2025-11-04T11:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 233.55,
+                "meteo": 227.68,
+                "metno": 250.16,
+                "noaa": 249.09,
+                "sg": 250.16
+            },
+            "waveHeight": {
+                "dwd": 0.8,
+                "ecmwf": 1.24,
+                "meteo": 1.2,
+                "metno": 1.15,
+                "noaa": 1.18,
+                "sg": 1.15
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 228.99,
+                "metno": 191.84,
+                "meto": 200.04,
+                "sg": 191.84
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.08,
+                "meto": 0.08,
+                "sg": 0.08
+            },
+            "seaLevel": {
+                "meto": 0.08,
+                "sg": 0.08
+            },
+            "time": "2025-11-04T12:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 233.17,
+                "meteo": 227.13,
+                "metno": 250.23,
+                "noaa": 248.9,
+                "sg": 250.23
+            },
+            "waveHeight": {
+                "dwd": 0.75,
+                "ecmwf": 1.22,
+                "meteo": 1.16,
+                "metno": 1.1,
+                "noaa": 1.15,
+                "sg": 1.1
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 251.16,
+                "metno": 192.45,
+                "meto": 196.02,
+                "sg": 192.45
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.07,
+                "meto": 0.07,
+                "sg": 0.07
+            },
+            "seaLevel": {
+                "meto": 0.06,
+                "sg": 0.06
+            },
+            "time": "2025-11-04T13:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 232.21,
+                "meteo": 225.87,
+                "metno": 250.51,
+                "noaa": 248.21,
+                "sg": 250.51
+            },
+            "waveHeight": {
+                "dwd": 0.7,
+                "ecmwf": 1.15,
+                "meteo": 1.09,
+                "metno": 1.02,
+                "noaa": 1.11,
+                "sg": 1.02
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 273.34,
+                "metno": 190.88,
+                "meto": 189.35,
+                "sg": 190.88
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.08,
+                "meto": 0.06,
+                "sg": 0.08
+            },
+            "seaLevel": {
+                "meto": 0.04,
+                "sg": 0.04
+            },
+            "time": "2025-11-04T14:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 231.25,
+                "meteo": 224.61,
+                "metno": 250.07,
+                "noaa": 247.51,
+                "sg": 250.07
+            },
+            "waveHeight": {
+                "dwd": 0.66,
+                "ecmwf": 1.09,
+                "meteo": 1.02,
+                "metno": 0.93,
+                "noaa": 1.07,
+                "sg": 0.93
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 295.51,
+                "metno": 193.25,
+                "meto": 183.37,
+                "sg": 193.25
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.04,
+                "meto": 0.05,
+                "sg": 0.04
+            },
+            "seaLevel": {
+                "meto": 0.02,
+                "sg": 0.02
+            },
+            "time": "2025-11-04T15:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 230.29,
+                "meteo": 223.35,
+                "metno": 249.0,
+                "noaa": 246.82,
+                "sg": 249.0
+            },
+            "waveHeight": {
+                "dwd": 0.62,
+                "ecmwf": 1.02,
+                "meteo": 0.95,
+                "metno": 0.84,
+                "noaa": 1.03,
+                "sg": 0.84
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 334.12,
+                "metno": 23.62,
+                "meto": 182.24,
+                "sg": 23.62
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.0,
+                "meto": 0.05,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": 0.01,
+                "sg": 0.01
+            },
+            "time": "2025-11-04T16:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 229.54,
+                "meteo": 222.56,
+                "metno": 247.99,
+                "noaa": 246.03,
+                "sg": 247.99
+            },
+            "waveHeight": {
+                "dwd": 0.57,
+                "ecmwf": 0.97,
+                "meteo": 0.9,
+                "metno": 0.77,
+                "noaa": 0.99,
+                "sg": 0.77
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 12.73,
+                "metno": 14.55,
+                "meto": 182.35,
+                "sg": 14.55
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.03,
+                "meto": 0.05,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": -0.01,
+                "sg": -0.01
+            },
+            "time": "2025-11-04T17:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 228.8,
+                "meteo": 221.77,
+                "metno": 247.39,
+                "noaa": 245.23,
+                "sg": 247.39
+            },
+            "waveHeight": {
+                "dwd": 0.54,
+                "ecmwf": 0.92,
+                "meteo": 0.86,
+                "metno": 0.72,
+                "noaa": 0.95,
+                "sg": 0.72
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 51.34,
+                "metno": 12.02,
+                "meto": 183.94,
+                "sg": 12.02
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.08,
+                "meto": 0.04,
+                "sg": 0.08
+            },
+            "seaLevel": {
+                "meto": -0.01,
+                "sg": -0.01
+            },
+            "time": "2025-11-04T18:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 228.06,
+                "meteo": 220.98,
+                "metno": 247.28,
+                "noaa": 244.44,
+                "sg": 247.28
+            },
+            "waveHeight": {
+                "dwd": 0.54,
+                "ecmwf": 0.86,
+                "meteo": 0.81,
+                "metno": 0.68,
+                "noaa": 0.91,
+                "sg": 0.68
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 74.9,
+                "metno": 14.57,
+                "meto": 185.98,
+                "sg": 14.57
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.1,
+                "meto": 0.04,
+                "sg": 0.1
+            },
+            "seaLevel": {
+                "meto": 0.0,
+                "sg": 0.0
+            },
+            "time": "2025-11-04T19:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 226.62,
+                "meteo": 220.51,
+                "metno": 246.11,
+                "noaa": 243.77,
+                "sg": 246.11
+            },
+            "waveHeight": {
+                "ecmwf": 0.86,
+                "meteo": 0.8,
+                "metno": 0.66,
+                "noaa": 0.87,
+                "sg": 0.66
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 98.45,
+                "metno": 16.49,
+                "meto": 182.46,
+                "sg": 16.49
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.1,
+                "meto": 0.03,
+                "sg": 0.1
+            },
+            "seaLevel": {
+                "meto": 0.01,
+                "sg": 0.01
+            },
+            "time": "2025-11-04T20:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 225.19,
+                "meteo": 220.04,
+                "metno": 243.56,
+                "noaa": 243.11,
+                "sg": 243.56
+            },
+            "waveHeight": {
+                "ecmwf": 0.85,
+                "meteo": 0.78,
+                "metno": 0.66,
+                "noaa": 0.84,
+                "sg": 0.66
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 122.01,
+                "metno": 19.03,
+                "meto": 172.06,
+                "sg": 19.03
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.06,
+                "meto": 0.03,
+                "sg": 0.06
+            },
+            "seaLevel": {
+                "meto": 0.01,
+                "sg": 0.01
+            },
+            "time": "2025-11-04T21:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 223.75,
+                "meteo": 219.57,
+                "metno": 241.07,
+                "noaa": 242.44,
+                "sg": 241.07
+            },
+            "waveHeight": {
+                "ecmwf": 0.85,
+                "meteo": 0.77,
+                "metno": 0.67,
+                "noaa": 0.8,
+                "sg": 0.67
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 112.53,
+                "metno": 35.74,
+                "meto": 165.73,
+                "sg": 35.74
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.02,
+                "meto": 0.03,
+                "sg": 0.02
+            },
+            "seaLevel": {
+                "meto": -0.0,
+                "sg": -0.0
+            },
+            "time": "2025-11-04T22:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 225.18,
+                "meteo": 221.69,
+                "metno": 241.35,
+                "noaa": 241.09,
+                "sg": 241.35
+            },
+            "waveHeight": {
+                "ecmwf": 0.84,
+                "meteo": 0.75,
+                "metno": 0.69,
+                "noaa": 0.78,
+                "sg": 0.69
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 103.06,
+                "metno": 183.07,
+                "meto": 164.9,
+                "sg": 183.07
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.03,
+                "meto": 0.03,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": -0.02,
+                "sg": -0.02
+            },
+            "time": "2025-11-04T23:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 226.61,
+                "meteo": 223.82,
+                "metno": 243.34,
+                "noaa": 239.75,
+                "sg": 243.34
+            },
+            "waveHeight": {
+                "ecmwf": 0.83,
+                "meteo": 0.72,
+                "metno": 0.7,
+                "noaa": 0.75,
+                "sg": 0.7
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 93.58,
+                "metno": 188.33,
+                "meto": 159.36,
+                "sg": 188.33
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.1,
+                "meto": 0.03,
+                "sg": 0.1
+            },
+            "seaLevel": {
+                "meto": -0.02,
+                "sg": -0.02
+            },
+            "time": "2025-11-05T00:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 228.04,
+                "meteo": 225.94,
+                "metno": 245.88,
+                "noaa": 238.4,
+                "sg": 245.88
+            },
+            "waveHeight": {
+                "ecmwf": 0.82,
+                "meteo": 0.7,
+                "metno": 0.68,
+                "noaa": 0.73,
+                "sg": 0.68
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 95.72,
+                "metno": 187.54,
+                "meto": 140.5,
+                "sg": 187.54
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.11,
+                "meto": 0.03,
+                "sg": 0.11
+            },
+            "seaLevel": {
+                "meto": -0.02,
+                "sg": -0.02
+            },
+            "time": "2025-11-05T01:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 229.02,
+                "meteo": 225.67,
+                "metno": 248.37,
+                "noaa": 238.6,
+                "sg": 248.37
+            },
+            "waveHeight": {
+                "ecmwf": 0.78,
+                "meteo": 0.69,
+                "metno": 0.64,
+                "noaa": 0.72,
+                "sg": 0.64
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 97.87,
+                "metno": 187.17,
+                "meto": 121.88,
+                "sg": 187.17
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.09,
+                "meto": 0.03,
+                "sg": 0.09
+            },
+            "seaLevel": {
+                "meto": -0.02,
+                "sg": -0.02
+            },
+            "time": "2025-11-05T02:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 230.0,
+                "meteo": 225.41,
+                "metno": 250.1,
+                "noaa": 238.8,
+                "sg": 250.1
+            },
+            "waveHeight": {
+                "ecmwf": 0.74,
+                "meteo": 0.68,
+                "metno": 0.6,
+                "noaa": 0.72,
+                "sg": 0.6
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 100.01,
+                "metno": 183.14,
+                "meto": 106.29,
+                "sg": 183.14
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.06,
+                "meto": 0.03,
+                "sg": 0.06
+            },
+            "seaLevel": {
+                "meto": -0.03,
+                "sg": -0.03
+            },
+            "time": "2025-11-05T03:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 230.99,
+                "meteo": 225.14,
+                "metno": 250.79,
+                "noaa": 239.0,
+                "sg": 250.79
+            },
+            "waveHeight": {
+                "ecmwf": 0.7,
+                "meteo": 0.67,
+                "metno": 0.56,
+                "noaa": 0.71,
+                "sg": 0.56
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 63.52,
+                "metno": 159.68,
+                "meto": 99.52,
+                "sg": 159.68
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.01,
+                "meto": 0.03,
+                "sg": 0.01
+            },
+            "seaLevel": {
+                "meto": -0.03,
+                "sg": -0.03
+            },
+            "time": "2025-11-05T04:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 231.76,
+                "meteo": 225.62,
+                "metno": 250.83,
+                "noaa": 240.22,
+                "sg": 250.83
+            },
+            "waveHeight": {
+                "ecmwf": 0.68,
+                "meteo": 0.66,
+                "metno": 0.53,
+                "noaa": 0.73,
+                "sg": 0.53
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 27.03,
+                "metno": 29.64,
+                "meto": 111.86,
+                "sg": 29.64
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.03,
+                "meto": 0.03,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": -0.02,
+                "sg": -0.02
+            },
+            "time": "2025-11-05T05:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 232.54,
+                "meteo": 226.09,
+                "metno": 251.17,
+                "noaa": 241.43,
+                "sg": 251.17
+            },
+            "waveHeight": {
+                "ecmwf": 0.65,
+                "meteo": 0.66,
+                "metno": 0.51,
+                "noaa": 0.75,
+                "sg": 0.51
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 350.54,
+                "metno": 17.24,
+                "meto": 134.98,
+                "sg": 17.24
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.09,
+                "meto": 0.04,
+                "sg": 0.09
+            },
+            "seaLevel": {
+                "meto": -0.01,
+                "sg": -0.01
+            },
+            "time": "2025-11-05T06:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 233.32,
+                "meteo": 226.57,
+                "metno": 252.05,
+                "noaa": 242.65,
+                "sg": 252.05
+            },
+            "waveHeight": {
+                "ecmwf": 0.63,
+                "meteo": 0.65,
+                "metno": 0.49,
+                "noaa": 0.77,
+                "sg": 0.49
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 298.25,
+                "metno": 16.39,
+                "meto": 154.51,
+                "sg": 16.39
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.11,
+                "meto": 0.04,
+                "sg": 0.11
+            },
+            "seaLevel": {
+                "meto": 0.0,
+                "sg": 0.0
+            },
+            "time": "2025-11-05T07:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 232.54,
+                "meteo": 224.16,
+                "metno": 252.46,
+                "noaa": 243.92,
+                "sg": 252.46
+            },
+            "waveHeight": {
+                "ecmwf": 0.62,
+                "meteo": 0.63,
+                "metno": 0.49,
+                "noaa": 0.83,
+                "sg": 0.49
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 245.96,
+                "metno": 22.06,
+                "meto": 172.47,
+                "sg": 22.06
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.07,
+                "meto": 0.05,
+                "sg": 0.07
+            },
+            "seaLevel": {
+                "meto": 0.02,
+                "sg": 0.02
+            },
+            "time": "2025-11-05T08:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 231.76,
+                "meteo": 221.74,
+                "metno": 251.62,
+                "noaa": 245.18,
+                "sg": 251.62
+            },
+            "waveHeight": {
+                "ecmwf": 0.61,
+                "meteo": 0.62,
+                "metno": 0.49,
+                "noaa": 0.88,
+                "sg": 0.49
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 193.67,
+                "metno": 20.56,
+                "meto": 188.19,
+                "sg": 20.56
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.07,
+                "meto": 0.06,
+                "sg": 0.07
+            },
+            "seaLevel": {
+                "meto": 0.04,
+                "sg": 0.04
+            },
+            "time": "2025-11-05T09:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 230.98,
+                "meteo": 219.33,
+                "metno": 250.32,
+                "noaa": 246.45,
+                "sg": 250.32
+            },
+            "waveHeight": {
+                "ecmwf": 0.6,
+                "meteo": 0.6,
+                "metno": 0.48,
+                "noaa": 0.94,
+                "sg": 0.48
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 194.55,
+                "metno": 29.28,
+                "meto": 199.14,
+                "sg": 29.28
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.03,
+                "meto": 0.08,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": 0.06,
+                "sg": 0.06
+            },
+            "time": "2025-11-05T10:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 227.29,
+                "meteo": 217.09,
+                "metno": 248.93,
+                "noaa": 245.97,
+                "sg": 248.93
+            },
+            "waveHeight": {
+                "ecmwf": 0.64,
+                "meteo": 0.61,
+                "metno": 0.48,
+                "noaa": 0.92,
+                "sg": 0.48
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 195.43,
+                "metno": 155.63,
+                "meto": 204.96,
+                "sg": 155.63
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.02,
+                "meto": 0.08,
+                "sg": 0.02
+            },
+            "seaLevel": {
+                "meto": 0.09,
+                "sg": 0.09
+            },
+            "time": "2025-11-05T11:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 223.59,
+                "meteo": 214.84,
+                "metno": 247.08,
+                "noaa": 245.48,
+                "sg": 247.08
+            },
+            "waveHeight": {
+                "ecmwf": 0.67,
+                "meteo": 0.63,
+                "metno": 0.49,
+                "noaa": 0.91,
+                "sg": 0.49
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 196.31,
+                "metno": 181.91,
+                "meto": 205.42,
+                "sg": 181.91
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.05,
+                "meto": 0.08,
+                "sg": 0.05
+            },
+            "seaLevel": {
+                "meto": 0.1,
+                "sg": 0.1
+            },
+            "time": "2025-11-05T12:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 219.9,
+                "meteo": 212.6,
+                "metno": 244.98,
+                "noaa": 245.0,
+                "sg": 244.98
+            },
+            "waveHeight": {
+                "ecmwf": 0.71,
+                "meteo": 0.64,
+                "metno": 0.51,
+                "noaa": 0.89,
+                "sg": 0.51
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 192.78,
+                "metno": 184.82,
+                "meto": 202.72,
+                "sg": 184.82
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.08,
+                "meto": 0.07,
+                "sg": 0.08
+            },
+            "seaLevel": {
+                "meto": 0.1,
+                "sg": 0.1
+            },
+            "time": "2025-11-05T13:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 220.44,
+                "meteo": 212.88,
+                "metno": 244.73,
+                "noaa": 243.93,
+                "sg": 244.73
+            },
+            "waveHeight": {
+                "ecmwf": 0.71,
+                "meteo": 0.66,
+                "metno": 0.53,
+                "noaa": 0.91,
+                "sg": 0.53
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 189.24,
+                "metno": 185.42,
+                "meto": 199.12,
+                "sg": 185.42
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.11,
+                "meto": 0.07,
+                "sg": 0.11
+            },
+            "seaLevel": {
+                "meto": 0.09,
+                "sg": 0.09
+            },
+            "time": "2025-11-05T14:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 220.98,
+                "meteo": 213.17,
+                "metno": 245.58,
+                "noaa": 242.85,
+                "sg": 245.58
+            },
+            "waveHeight": {
+                "ecmwf": 0.71,
+                "meteo": 0.67,
+                "metno": 0.53,
+                "noaa": 0.94,
+                "sg": 0.53
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 185.71,
+                "metno": 178.52,
+                "meto": 194.86,
+                "sg": 178.52
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.07,
+                "meto": 0.06,
+                "sg": 0.07
+            },
+            "seaLevel": {
+                "meto": 0.06,
+                "sg": 0.06
+            },
+            "time": "2025-11-05T15:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 221.52,
+                "meteo": 213.45,
+                "metno": 245.75,
+                "noaa": 241.78,
+                "sg": 245.75
+            },
+            "waveHeight": {
+                "ecmwf": 0.71,
+                "meteo": 0.69,
+                "metno": 0.52,
+                "noaa": 0.96,
+                "sg": 0.52
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 211.24,
+                "metno": 150.46,
+                "meto": 190.06,
+                "sg": 150.46
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.03,
+                "meto": 0.06,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": 0.04,
+                "sg": 0.04
+            },
+            "time": "2025-11-05T16:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 220.4,
+                "meteo": 213.17,
+                "metno": 245.16,
+                "noaa": 242.47,
+                "sg": 245.16
+            },
+            "waveHeight": {
+                "ecmwf": 0.71,
+                "meteo": 0.69,
+                "metno": 0.51,
+                "noaa": 0.91,
+                "sg": 0.51
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 236.77,
+                "metno": 51.39,
+                "meto": 186.15,
+                "sg": 51.39
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.04,
+                "meto": 0.05,
+                "sg": 0.04
+            },
+            "seaLevel": {
+                "meto": 0.01,
+                "sg": 0.01
+            },
+            "time": "2025-11-05T17:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 219.29,
+                "meteo": 212.9,
+                "metno": 243.94,
+                "noaa": 243.16,
+                "sg": 243.94
+            },
+            "waveHeight": {
+                "ecmwf": 0.71,
+                "meteo": 0.69,
+                "metno": 0.5,
+                "noaa": 0.87,
+                "sg": 0.5
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 262.3,
+                "metno": 30.81,
+                "meto": 184.7,
+                "sg": 30.81
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.08,
+                "meto": 0.05,
+                "sg": 0.08
+            },
+            "seaLevel": {
+                "meto": -0.0,
+                "sg": -0.0
+            },
+            "time": "2025-11-05T18:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 218.18,
+                "meteo": 212.62,
+                "metno": 242.49,
+                "noaa": 243.85,
+                "sg": 242.49
+            },
+            "waveHeight": {
+                "ecmwf": 0.71,
+                "meteo": 0.69,
+                "metno": 0.48,
+                "noaa": 0.82,
+                "sg": 0.48
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 206.98,
+                "metno": 25.26,
+                "meto": 184.83,
+                "sg": 25.26
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.11,
+                "meto": 0.05,
+                "sg": 0.11
+            },
+            "seaLevel": {
+                "meto": -0.01,
+                "sg": -0.01
+            },
+            "time": "2025-11-05T19:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 217.27,
+                "meteo": 211.69,
+                "metno": 240.47,
+                "noaa": 243.27,
+                "sg": 240.47
+            },
+            "waveHeight": {
+                "ecmwf": 0.72,
+                "meteo": 0.69,
+                "metno": 0.49,
+                "noaa": 0.79,
+                "sg": 0.49
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 151.66,
+                "metno": 33.5,
+                "meto": 183.38,
+                "sg": 33.5
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.09,
+                "meto": 0.06,
+                "sg": 0.09
+            },
+            "seaLevel": {
+                "meto": -0.02,
+                "sg": -0.02
+            },
+            "time": "2025-11-05T20:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 216.36,
+                "meteo": 210.77,
+                "metno": 237.46,
+                "noaa": 242.68,
+                "sg": 237.46
+            },
+            "waveHeight": {
+                "ecmwf": 0.73,
+                "meteo": 0.69,
+                "metno": 0.5,
+                "noaa": 0.75,
+                "sg": 0.5
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 96.34,
+                "metno": 32.18,
+                "meto": 181.99,
+                "sg": 32.18
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.1,
+                "meto": 0.06,
+                "sg": 0.1
+            },
+            "seaLevel": {
+                "meto": -0.03,
+                "sg": -0.03
+            },
+            "time": "2025-11-05T21:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 215.45,
+                "meteo": 209.84,
+                "metno": 234.48,
+                "noaa": 242.1,
+                "sg": 234.48
+            },
+            "waveHeight": {
+                "ecmwf": 0.73,
+                "meteo": 0.69,
+                "metno": 0.52,
+                "noaa": 0.72,
+                "sg": 0.52
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 94.88,
+                "metno": 44.16,
+                "meto": 181.05,
+                "sg": 44.16
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.07,
+                "meto": 0.06,
+                "sg": 0.07
+            },
+            "seaLevel": {
+                "meto": -0.05,
+                "sg": -0.05
+            },
+            "time": "2025-11-05T22:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 215.23,
+                "meteo": 209.36,
+                "metno": 232.69,
+                "noaa": 241.78,
+                "sg": 232.69
+            },
+            "waveHeight": {
+                "ecmwf": 0.75,
+                "meteo": 0.72,
+                "metno": 0.54,
+                "noaa": 0.69,
+                "sg": 0.54
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 93.43,
+                "metno": 93.31,
+                "meto": 179.38,
+                "sg": 93.31
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.03,
+                "meto": 0.05,
+                "sg": 0.03
+            },
+            "seaLevel": {
+                "meto": -0.07,
+                "sg": -0.07
+            },
+            "time": "2025-11-05T23:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 215.02,
+                "meteo": 208.88,
+                "metno": 232.69,
+                "noaa": 241.45,
+                "sg": 232.69
+            },
+            "waveHeight": {
+                "ecmwf": 0.76,
+                "meteo": 0.74,
+                "metno": 0.59,
+                "noaa": 0.67,
+                "sg": 0.59
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 91.97,
+                "metno": 152.72,
+                "meto": 177.89,
+                "sg": 152.72
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "metno": 0.05,
+                "meto": 0.05,
+                "sg": 0.05
+            },
+            "seaLevel": {
+                "meto": -0.09,
+                "sg": -0.09
+            },
+            "time": "2025-11-06T00:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 214.81,
+                "meteo": 208.4,
+                "metno": 234.4,
+                "noaa": 241.13,
+                "sg": 234.4
+            },
+            "waveHeight": {
+                "ecmwf": 0.77,
+                "meteo": 0.77,
+                "metno": 0.63,
+                "noaa": 0.64,
+                "sg": 0.63
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 77.86,
+                "meto": 174.93,
+                "sg": 77.86
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.04,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.12,
+                "sg": -0.12
+            },
+            "time": "2025-11-06T01:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 215.53,
+                "meteo": 209.63,
+                "noaa": 240.87,
+                "sg": 215.53
+            },
+            "waveHeight": {
+                "ecmwf": 0.79,
+                "meteo": 0.79,
+                "noaa": 0.63,
+                "sg": 0.79
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 63.75,
+                "meto": 167.53,
+                "sg": 63.75
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.03,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.15,
+                "sg": -0.15
+            },
+            "time": "2025-11-06T02:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 216.24,
+                "meteo": 210.85,
+                "noaa": 240.62,
+                "sg": 216.24
+            },
+            "waveHeight": {
+                "ecmwf": 0.81,
+                "meteo": 0.82,
+                "noaa": 0.63,
+                "sg": 0.81
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 49.64,
+                "meto": 151.59,
+                "sg": 49.64
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.03,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.19,
+                "sg": -0.19
+            },
+            "time": "2025-11-06T03:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 216.95,
+                "meteo": 212.08,
+                "noaa": 240.36,
+                "sg": 216.95
+            },
+            "waveHeight": {
+                "ecmwf": 0.83,
+                "meteo": 0.84,
+                "noaa": 0.62,
+                "sg": 0.83
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 94.15,
+                "meto": 129.09,
+                "sg": 94.15
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.02,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.22,
+                "sg": -0.22
+            },
+            "time": "2025-11-06T04:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 219.05,
+                "meteo": 213.95,
+                "noaa": 238.63,
+                "sg": 219.05
+            },
+            "waveHeight": {
+                "ecmwf": 0.86,
+                "meteo": 0.85,
+                "noaa": 0.66,
+                "sg": 0.86
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 138.67,
+                "meto": 119.47,
+                "sg": 138.67
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.02,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.24,
+                "sg": -0.24
+            },
+            "time": "2025-11-06T05:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 221.14,
+                "meteo": 215.82,
+                "noaa": 236.91,
+                "sg": 221.14
+            },
+            "waveHeight": {
+                "ecmwf": 0.89,
+                "meteo": 0.85,
+                "noaa": 0.71,
+                "sg": 0.89
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 183.18,
+                "meto": 124.76,
+                "sg": 183.18
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.02,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.25,
+                "sg": -0.25
+            },
+            "time": "2025-11-06T06:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 223.24,
+                "meteo": 217.69,
+                "noaa": 235.18,
+                "sg": 223.24
+            },
+            "waveHeight": {
+                "ecmwf": 0.91,
+                "meteo": 0.86,
+                "noaa": 0.75,
+                "sg": 0.91
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 232.1,
+                "meto": 141.13,
+                "sg": 232.1
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.02,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.25,
+                "sg": -0.25
+            },
+            "time": "2025-11-06T07:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 224.35,
+                "meteo": 218.93,
+                "noaa": 237.23,
+                "sg": 224.35
+            },
+            "waveHeight": {
+                "ecmwf": 0.9,
+                "meteo": 0.88,
+                "noaa": 0.77,
+                "sg": 0.9
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 281.01,
+                "meto": 163.07,
+                "sg": 281.01
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.02,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.24,
+                "sg": -0.24
+            },
+            "time": "2025-11-06T08:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 225.47,
+                "meteo": 220.17,
+                "noaa": 239.27,
+                "sg": 225.47
+            },
+            "waveHeight": {
+                "ecmwf": 0.88,
+                "meteo": 0.91,
+                "noaa": 0.8,
+                "sg": 0.88
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 329.93,
+                "meto": 186.35,
+                "sg": 329.93
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.02,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.23,
+                "sg": -0.23
+            },
+            "time": "2025-11-06T09:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 226.59,
+                "meteo": 221.41,
+                "noaa": 241.32,
+                "sg": 226.59
+            },
+            "waveHeight": {
+                "ecmwf": 0.87,
+                "meteo": 0.93,
+                "noaa": 0.82,
+                "sg": 0.87
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 302.22,
+                "meto": 202.54,
+                "sg": 302.22
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.03,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.2,
+                "sg": -0.2
+            },
+            "time": "2025-11-06T10:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 228.93,
+                "meteo": 224.86,
+                "noaa": 242.91,
+                "sg": 228.93
+            },
+            "waveHeight": {
+                "ecmwf": 0.95,
+                "meteo": 0.99,
+                "noaa": 0.87,
+                "sg": 0.95
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 274.51,
+                "meto": 210.52,
+                "sg": 274.51
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.05,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.18,
+                "sg": -0.18
+            },
+            "time": "2025-11-06T11:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 231.27,
+                "meteo": 228.32,
+                "noaa": 244.49,
+                "sg": 231.27
+            },
+            "waveHeight": {
+                "ecmwf": 1.03,
+                "meteo": 1.06,
+                "noaa": 0.93,
+                "sg": 1.03
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 246.8,
+                "meto": 214.27,
+                "sg": 246.8
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.07,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.14,
+                "sg": -0.14
+            },
+            "time": "2025-11-06T12:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 233.61,
+                "meteo": 231.77,
+                "noaa": 246.08,
+                "sg": 233.61
+            },
+            "waveHeight": {
+                "ecmwf": 1.11,
+                "meteo": 1.12,
+                "noaa": 0.98,
+                "sg": 1.11
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 221.38,
+                "meto": 214.34,
+                "sg": 221.38
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.08,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.11,
+                "sg": -0.11
+            },
+            "time": "2025-11-06T13:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 235.79,
+                "meteo": 234.1,
+                "noaa": 246.93,
+                "sg": 235.79
+            },
+            "waveHeight": {
+                "ecmwf": 1.18,
+                "meteo": 1.17,
+                "noaa": 1.02,
+                "sg": 1.18
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 195.96,
+                "meto": 214.79,
+                "sg": 195.96
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.09,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.08,
+                "sg": -0.08
+            },
+            "time": "2025-11-06T14:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 237.96,
+                "meteo": 236.43,
+                "noaa": 247.77,
+                "sg": 237.96
+            },
+            "waveHeight": {
+                "ecmwf": 1.25,
+                "meteo": 1.23,
+                "noaa": 1.06,
+                "sg": 1.25
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 170.54,
+                "meto": 214.82,
+                "sg": 170.54
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.11,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.06,
+                "sg": -0.06
+            },
+            "time": "2025-11-06T15:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 240.13,
+                "meteo": 238.76,
+                "noaa": 248.62,
+                "sg": 240.13
+            },
+            "waveHeight": {
+                "ecmwf": 1.32,
+                "meteo": 1.28,
+                "noaa": 1.1,
+                "sg": 1.32
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 216.46,
+                "meto": 214.73,
+                "sg": 216.46
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.12,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.04,
+                "sg": -0.04
+            },
+            "time": "2025-11-06T16:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 239.64,
+                "meteo": 238.38,
+                "noaa": 250.16,
+                "sg": 239.64
+            },
+            "waveHeight": {
+                "ecmwf": 1.39,
+                "meteo": 1.34,
+                "noaa": 1.28,
+                "sg": 1.39
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 262.37,
+                "meto": 214.96,
+                "sg": 262.37
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.12,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.03,
+                "sg": -0.03
+            },
+            "time": "2025-11-06T17:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 239.15,
+                "meteo": 237.99,
+                "noaa": 251.71,
+                "sg": 239.15
+            },
+            "waveHeight": {
+                "ecmwf": 1.45,
+                "meteo": 1.4,
+                "noaa": 1.46,
+                "sg": 1.45
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 308.29,
+                "meto": 214.98,
+                "sg": 308.29
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.13,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.01,
+                "sg": -0.01
+            },
+            "time": "2025-11-06T18:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 238.65,
+                "meteo": 237.61,
+                "noaa": 253.25,
+                "sg": 238.65
+            },
+            "waveHeight": {
+                "ecmwf": 1.52,
+                "meteo": 1.46,
+                "noaa": 1.64,
+                "sg": 1.52
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 326.03,
+                "meto": 215.05,
+                "sg": 326.03
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.13,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": -0.0,
+                "sg": -0.0
+            },
+            "time": "2025-11-06T19:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 238.87,
+                "meteo": 237.83,
+                "noaa": 256.36,
+                "sg": 238.87
+            },
+            "waveHeight": {
+                "ecmwf": 1.54,
+                "meteo": 1.47,
+                "noaa": 1.53,
+                "sg": 1.54
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 343.77,
+                "meto": 215.35,
+                "sg": 343.77
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.13,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": 0.01,
+                "sg": 0.01
+            },
+            "time": "2025-11-06T20:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 239.09,
+                "meteo": 238.05,
+                "noaa": 259.47,
+                "sg": 239.09
+            },
+            "waveHeight": {
+                "ecmwf": 1.56,
+                "meteo": 1.48,
+                "noaa": 1.43,
+                "sg": 1.56
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 1.51,
+                "meto": 215.49,
+                "sg": 1.51
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.14,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": 0.02,
+                "sg": 0.02
+            },
+            "time": "2025-11-06T21:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 239.31,
+                "meteo": 238.27,
+                "noaa": 262.58,
+                "sg": 239.31
+            },
+            "waveHeight": {
+                "ecmwf": 1.58,
+                "meteo": 1.49,
+                "noaa": 1.32,
+                "sg": 1.58
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 349.06,
+                "meto": 215.89,
+                "sg": 349.06
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.13,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": 0.04,
+                "sg": 0.04
+            },
+            "time": "2025-11-06T22:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 240.46,
+                "meteo": 239.1,
+                "noaa": 268.5,
+                "sg": 240.46
+            },
+            "waveHeight": {
+                "ecmwf": 1.53,
+                "meteo": 1.45,
+                "noaa": 1.23,
+                "sg": 1.53
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 336.61,
+                "meto": 215.76,
+                "sg": 336.61
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.13,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": 0.05,
+                "sg": 0.05
+            },
+            "time": "2025-11-06T23:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 241.61,
+                "meteo": 239.93,
+                "noaa": 274.42,
+                "sg": 241.61
+            },
+            "waveHeight": {
+                "ecmwf": 1.48,
+                "meteo": 1.41,
+                "noaa": 1.15,
+                "sg": 1.48
+            }
+        },
+        {
+            "currentDirection": {
+                "ecmwf": 324.16,
+                "meto": 215.66,
+                "sg": 324.16
+            },
+            "currentSpeed": {
+                "ecmwf": 0.0,
+                "meto": 0.12,
+                "sg": 0.0
+            },
+            "seaLevel": {
+                "meto": 0.06,
+                "sg": 0.06
+            },
+            "time": "2025-11-07T00:00:00+00:00",
+            "waveDirection": {
+                "ecmwf": 242.76,
+                "meteo": 240.76,
+                "noaa": 280.34,
+                "sg": 242.76
+            },
+            "waveHeight": {
+                "ecmwf": 1.43,
+                "meteo": 1.37,
+                "noaa": 1.06,
+                "sg": 1.43
+            }
+        },
+        {
+            "currentDirection": {
+                "meto": 215.72,
+                "sg": 215.72
+            },
+            "currentSpeed": {
+                "meto": 0.11,
+                "sg": 0.11
+            },
+            "seaLevel": {
+                "meto": 0.06,
+                "sg": 0.06
+            },
+            "time": "2025-11-07T01:00:00+00:00",
+            "waveDirection": {
+                "meteo": 241.18,
+                "noaa": 284.44,
+                "sg": 241.18
+            },
+            "waveHeight": {
+                "meteo": 1.31,
+                "noaa": 1.01,
+                "sg": 1.31
+            }
+        },
+        {
+            "currentDirection": {
+                "meto": 215.63,
+                "sg": 215.63
+            },
+            "currentSpeed": {
+                "meto": 0.1,
+                "sg": 0.1
+            },
+            "seaLevel": {
+                "meto": 0.06,
+                "sg": 0.06
+            },
+            "time": "2025-11-07T02:00:00+00:00",
+            "waveDirection": {
+                "meteo": 241.6,
+                "noaa": 288.54,
+                "sg": 241.6
+            },
+            "waveHeight": {
+                "meteo": 1.26,
+                "noaa": 0.97,
+                "sg": 1.26
+            }
+        },
+        {
+            "currentDirection": {
+                "meto": 215.62,
+                "sg": 215.62
+            },
+            "currentSpeed": {
+                "meto": 0.09,
+                "sg": 0.09
+            },
+            "seaLevel": {
+                "meto": 0.07,
+                "sg": 0.07
+            },
+            "time": "2025-11-07T03:00:00+00:00",
+            "waveDirection": {
+                "meteo": 242.02,
+                "noaa": 292.64,
+                "sg": 242.02
+            },
+            "waveHeight": {
+                "meteo": 1.2,
+                "noaa": 0.92,
+                "sg": 1.2
+            }
+        }
+    ],
+    "meta": {
+        "cost": 1,
+        "dailyQuota": 10,
+        "end": "2025-11-07 03:00",
+        "lat": 51.9225,
+        "lng": 4.4792,
+        "params": [
+            "waveHeight",
+            "waveDirection",
+            "currentSpeed",
+            "currentDirection",
+            "seaLevel"
+        ],
+        "requestCount": 1,
+        "start": "2025-11-02 03:00"
+    }
+}

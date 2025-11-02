@@ -8,6 +8,9 @@ import PortMarker from './PortMarker'
 import VesselClusterGroup from './VesselClusterGroup'
 import MapSearch from './MapSearch'
 import VesselSidebar from './VesselSidebar'
+import AdvancedWeatherLayer from './AdvancedWeatherLayer'
+import AdvancedMarineLayer from './AdvancedMarineLayer'
+import DataLegend from './DataLegend'
 import { samplePorts, Port } from '@/lib/portData'
 import { ShipData } from '@/lib/types'
 
@@ -51,6 +54,8 @@ function MapController({ flyToLocation }: { flyToLocation: [number, number, numb
   return null
 }
 
+type DataLayerType = 'vessels' | 'weather' | 'marine'
+
 interface NauticalMapProps {
   center?: [number, number]
   zoom?: number
@@ -69,6 +74,19 @@ export default function NauticalMap({
   const [selectedVessel, setSelectedVessel] = useState<ShipData | null>(null)
   const [flyToLocation, setFlyToLocation] = useState<[number, number, number] | null>(null)
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [activeLayers, setActiveLayers] = useState<Set<DataLayerType>>(new Set(['vessels']))
+
+  const toggleLayer = (layer: DataLayerType) => {
+    setActiveLayers(prev => {
+      const newLayers = new Set(prev)
+      if (newLayers.has(layer)) {
+        newLayers.delete(layer)
+      } else {
+        newLayers.add(layer)
+      }
+      return newLayers
+    })
+  }
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
@@ -147,10 +165,18 @@ export default function NauticalMap({
         {portMarkers}
         
         {/* Render clustered vessels */}
-        <VesselClusterGroup 
-          vessels={vessels} 
-          onVesselClick={handleVesselClick}
-        />
+        {activeLayers.has('vessels') && (
+          <VesselClusterGroup 
+            vessels={vessels} 
+            onVesselClick={handleVesselClick}
+          />
+        )}
+
+        {/* Render weather data */}
+        <AdvancedWeatherLayer visible={activeLayers.has('weather')} />
+
+        {/* Render marine data */}
+        <AdvancedMarineLayer visible={activeLayers.has('marine')} />
       </MapContainer>
       
       {/* Search component */}
@@ -165,6 +191,34 @@ export default function NauticalMap({
         />
       </div>
       
+      {/* Data layer controls */}
+      <div className="absolute top-4 left-4 z-[1001] bg-black/80 backdrop-blur-sm p-2 rounded-lg text-white shadow-lg">
+        <div className="text-xs font-medium mb-2 text-center">Layers</div>
+        <div className="space-y-1">
+          {[
+            { value: 'vessels' as DataLayerType, label: 'Vessels', icon: '🚢' },
+            { value: 'weather' as DataLayerType, label: 'Weather', icon: '🌤️' },
+            { value: 'marine' as DataLayerType, label: 'Marine', icon: '🌊' }
+          ].map((option) => (
+            <label 
+              key={option.value} 
+              className={`flex items-center cursor-pointer p-1 rounded transition-colors ${
+                activeLayers.has(option.value) ? 'bg-blue-600/50' : 'hover:bg-white/10'
+              }`}
+            >
+              <input
+                type="checkbox"
+                checked={activeLayers.has(option.value)}
+                onChange={() => toggleLayer(option.value)}
+                className="mr-2 accent-blue-500"
+              />
+              <span className="mr-1 text-xs">{option.icon}</span>
+              <span className="text-xs">{option.label}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
       {/* Fullscreen toggle button */}
       <button
         onClick={toggleFullscreen}
@@ -174,6 +228,9 @@ export default function NauticalMap({
         {isFullscreen ? <Minimize2 size={20} /> : <Maximize2 size={20} />}
       </button>
       
+      {/* Data legend */}
+      <DataLegend activeLayers={activeLayers} />
+
       {/* Vessel details sidebar */}
       <VesselSidebar 
         vessel={selectedVessel}
