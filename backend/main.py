@@ -122,6 +122,7 @@ async def websocket_ship_tracking(websocket: WebSocket, port: str = Query(...)):
             port=port
         ):
             # Send ship position data to frontend
+            
             await websocket.send_json(ship_data)
             
     except WebSocketDisconnect:
