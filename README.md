@@ -11,6 +11,7 @@
 
 *Quantitative risk assessment for maritime operations using real-time AIS data, weather forecasting, and marinal data.*
 
+![Vesser Platform](Thumbnail.png)
 
 </div>
 
