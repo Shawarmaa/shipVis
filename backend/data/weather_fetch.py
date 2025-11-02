@@ -1,12 +1,6 @@
 import os
 import requests
 import json
-from dotenv import load_dotenv
-
-load_dotenv()
-API_KEY = os.getenv("API_KEY")
-print(API_KEY)
-
 
 
 
@@ -15,10 +9,8 @@ def update_port_weather(lat: float, lon: float):
     Function to overwrite weather_data.json file with latest data from OpenWeatherMap API
     """
     # We add '&units=metric' to get Celsius and meters/sec (not Fahrenheit/mph)
-    print("we got here")
-    API_KEY = os.getenv("API_KEY")
-    print(API_KEY)
-    url = f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API_KEY}"
+    appid = os.getenv("WEATHER_ID")
+    url = f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={appid}"
 
     response = requests.get(url)
     data = response.json()

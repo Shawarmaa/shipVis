@@ -1,10 +1,11 @@
 from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect, Query
 from pydantic import BaseModel
-from datetime import datetime
+from datetime import datetime, timedelta
 from fastapi.middleware.cors import CORSMiddleware # To allow frontend to connect
 import json
 
 import data.weather_fetch as weather_fetch
+import data.news_fetch as news_fetch
 import data.vessel as vessel
 from dotenv import load_dotenv
 # Download the required libraries using: pip install fastapi "uvicorn[standard]"
@@ -55,6 +56,23 @@ def update_port_forecast(lat: float, lon: float):
     try:
         weather_fetch.update_port_weather(lat=lat, lon=lon)
         return {"status": "success", "message": "Weather data file updated"}
+    
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+@app.get("/api/news_fetch")
+def get_news(
+    locations: str, 
+    start_date: str = Query(default_factory= lambda: (datetime.now() - timedelta(hours=96)).isoformat()),
+    end_date: str = Query(default_factory= lambda: datetime.now().isoformat())
+):
+    """
+    Endpoint to get overwrite weather_data.json file with latest data from OpenWeatherMap API
+    """
+    try:
+        articles = news_fetch.query_news_api(locations, start_date=start_date, end_date=end_date)
+        print(articles)
+        #return {articles}
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
