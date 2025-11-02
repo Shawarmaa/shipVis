@@ -34,6 +34,9 @@ async def predict_port_bound_ships(bounding_box: list[list[float]], port: str, f
             
             if message_type == "ShipStaticData":
                 static_data = message["Message"]["ShipStaticData"]
+                length = static_data["Dimension"]["A"] + static_data["Dimension"]["B"] + static_data["Dimension"]["C"] + static_data["Dimension"]["D"]
+                if length <= 60:
+                    continue
                 destination = static_data.get("Destination", "").strip()
                 if destination != port:
                     continue
@@ -86,42 +89,75 @@ async def predict_port_bound_ships(bounding_box: list[list[float]], port: str, f
 
 async def get_all_ships(bounding_box: list[list[float]]):
     """
-    Async generator that yields all ships in the bounding box.
+    Async generator that yields all ships in the bounding box that meet minimum size requirements (length > 60m).
     """
+    # Set to track MMSI of ships that meet size requirements
+    ships_to_track = set()
+    ship_static_info = {}  # Store static info for each ship
+    
     async with websockets.connect("wss://stream.aisstream.io/v0/stream") as websocket:
         subscribe_message = {"APIKey": os.getenv("AIS_API_KEY"),  # Required !
                              "BoundingBoxes": [bounding_box], # Required!
                              "FiltersShipMMSI": None, # Optional!
-                             "FilterMessageTypes": ["PositionReport"]} # Optional!
+                             "FilterMessageTypes": ["ShipStaticData", "PositionReport"]} # Optional!
         subscribe_message_json = json.dumps(subscribe_message)
         await websocket.send(subscribe_message_json)
         
         async for message_json in websocket:
             message = json.loads(message_json)
-            position_data = message["Message"]["PositionReport"]
-            print(position_data)
-            user_id = position_data["UserID"]
-            ship_data = ShipPositionData(
-                    mmsi=user_id,
-                    ship_name=message.get("MetaData", {}).get("ShipName", "Unknown"),
-                    latitude=position_data.get("Latitude"),
-                    longitude=position_data.get("Longitude"),
-                    speed=position_data.get("Sog", 0),  # Speed over ground
-                    course=position_data.get("Cog", 0),  # Course over ground
-                    heading=position_data.get("TrueHeading", 0),
-                    nav_status=position_data.get("NavigationalStatus", 15),
-                    timestamp=message.get("MetaData", {}).get("time_utc", datetime.now(timezone.utc).isoformat()),
-                    destination="",
-                    call_sign="",
-                    ship_type=0
-            )
+            message_type = message["MessageType"]
             
-            # IMPORTANT: Yield the data to return it from the generator
-            yield ship_data.model_dump()
+            if message_type == "ShipStaticData":
+                static_data = message["Message"]["ShipStaticData"]
+                length = static_data["Dimension"]["A"] + static_data["Dimension"]["B"] + static_data["Dimension"]["C"] + static_data["Dimension"]["D"]
+                if length <= 60:
+                    continue
+                user_id = static_data["UserID"]
+                ships_to_track.add(user_id)
+                
+                # Store static info for richer data
+                ship_static_info[user_id] = {
+                    "name": static_data.get("Name", "Unknown"),
+                    "call_sign": static_data.get("CallSign", ""),
+                    "destination": static_data.get("Destination", "").strip(),
+                    "ship_type": static_data.get("Type", 0)
+                }
+                
+                print(f"Tracking ship: {static_data.get('Name', 'Unknown')} (MMSI: {user_id}) - Length: {length}m")
+            
+            elif message_type == "PositionReport":
+                position_data = message["Message"]["PositionReport"]
+                user_id = position_data["UserID"]
+                
+                # Only process ships that meet size requirements
+                if user_id not in ships_to_track:
+                    continue
+                
+                # Get ship info from stored static data or metadata
+                ship_info = ship_static_info.get(user_id, {})
+                ship_name = ship_info.get("name") or message.get("MetaData", {}).get("ShipName", "Unknown")
+                
+                ship_data = ShipPositionData(
+                        mmsi=user_id,
+                        ship_name=ship_name,
+                        latitude=position_data.get("Latitude"),
+                        longitude=position_data.get("Longitude"),
+                        speed=position_data.get("Sog", 0),  # Speed over ground
+                        course=position_data.get("Cog", 0),  # Course over ground
+                        heading=position_data.get("TrueHeading", 0),
+                        nav_status=position_data.get("NavigationalStatus", 15),
+                        timestamp=message.get("MetaData", {}).get("time_utc", datetime.now(timezone.utc).isoformat()),
+                        destination=ship_info.get("destination", ""),
+                        call_sign=ship_info.get("call_sign", ""),
+                        ship_type=ship_info.get("ship_type", 0)
+                )
+                
+                # IMPORTANT: Yield the data to return it from the generator
+                yield ship_data.model_dump()
 
 async def main():
     """Test function to run the ship tracker"""
-    async for ship_data in get_all_ships(bounding_box=[[-90, -180], [90, 180]]):
+    async for ship_data in predict_port_bound_ships(bounding_box=[[-90, -180], [90, 180]], port="ROTTERDAM"):
         print(ship_data)
     
 if __name__ == "__main__":
