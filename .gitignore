@@ -1,6 +1,5 @@
 venv/
 .env
-frontend/components/NauticalMap.tsx
 backend/__pycache__/models.cpython-313.pyc
 backend/__pycache__/main.cpython-313.pyc
 backend/data/__pycache__/weather_fetch.cpython-313.pyc
