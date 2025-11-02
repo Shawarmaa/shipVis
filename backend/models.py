@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from datetime import datetime
+from typing import List, Optional
 
 
 class ShipPositionData(BaseModel):
@@ -15,6 +16,72 @@ class ShipPositionData(BaseModel):
     destination: str
     call_sign: str
     ship_type: int
+
+
+class HourlyInsight(BaseModel):
+    time: str
+    waveHeight: float
+    windSpeed: float
+    pop: float  # probability of precipitation
+    risk_score: float
+    cross_angle: float
+    storm_flag: bool
+    temperature: Optional[float] = None
+    pressure: Optional[float] = None
+    seaLevel: Optional[float] = None
+
+
+class RotterdamSummary(BaseModel):
+    max_risk: float
+    max_risk_time: str
+    storm_hours: List[str]
+    avg_wave_height: float
+    avg_wind_speed: float
+
+
+class RotterdamInsightsResponse(BaseModel):
+    city: str
+    insights: List[HourlyInsight]
+    summary: RotterdamSummary
+
+
+class TimelineDataPoint(BaseModel):
+    time: str
+    risk_score: float
+    is_storm: bool
+
+
+class RiskTimelineResponse(BaseModel):
+    city: str
+    timeline: List[TimelineDataPoint]
+    storm_threshold: float
+
+
+class MultiMetricDataPoint(BaseModel):
+    time: str
+    waveHeight: float
+    windSpeed: float
+    rainProbability: float  # as percentage
+
+
+class MultiMetricResponse(BaseModel):
+    city: str
+    data: List[MultiMetricDataPoint]
+    thresholds: dict
+
+
+class RiskDistribution(BaseModel):
+    Safe: int
+    Moderate: int
+    High: int
+    Dangerous: int
+
+
+class RiskDistributionResponse(BaseModel):
+    city: str
+    distribution: RiskDistribution
+    total_hours: int
+    percentages: dict
 # class PositionReport(BaseModel):
 #     mmsi_id: int
 #     ship_name: str

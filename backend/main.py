@@ -9,6 +9,7 @@ import data.tides_fetch as tides_fetch
 import data.news_fetch as news_fetch
 import data.vessel as vessel
 from dotenv import load_dotenv
+import analysis_router
 # Download the required libraries using: pip install fastapi "uvicorn[standard]"
 # To run, type the following command into the terminal:
 # python -m uvicorn main:app --reload
@@ -41,6 +42,9 @@ app.add_middleware(
     allow_methods=["GET", "POST"],  # Specify the methods you actually use
     allow_headers=["*"],
 )
+
+# Include routers
+app.include_router(analysis_router.router)
 
 # api endpoints
 
