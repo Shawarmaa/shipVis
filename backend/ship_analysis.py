@@ -31,8 +31,8 @@ def eta_to_iso(eta_dict: Dict, reference: str) -> Optional[str]:
     except Exception:
         return None
 
-def assess_ship_docking(eta, timestamp):
-    eta_dt = datetime.fromisoformat(eta_to_iso(eta, timestamp))
+def assess_ship_docking(ship: ShipPositionData):
+    eta_dt = datetime.fromisoformat(eta_to_iso(ship.eta, ship.timestamp))
     now = datetime.now()
     
     # Only assess if ETA is within 5 days
@@ -118,6 +118,7 @@ def get_conditions_at_time(target_time: datetime) -> Optional[Dict]:
 
 def calculate_risk(conditions: Dict) -> Tuple[float, Dict]:
     """Calculate risk score and identify risk factors"""
+    risk_score = 0.0
     risk_factors = {}
     
     # Hard limits that prevent docking
@@ -127,18 +128,20 @@ def calculate_risk(conditions: Dict) -> Tuple[float, Dict]:
         return 1.0, {"critical": "Wave height exceeds safety limit (4.0 m)"}
         
     # Calculate base risk score
-    risk_score = (
-        0.4 * (conditions['wave_height'] / 3.0) +  # Max safe wave height ~3m
-        0.3 * (conditions['wind_speed'] / 10.0) +  # Max safe wind ~10 m/s
-        0.2 * (1 - conditions['visibility'] / 10000)  # Max visibility 10km
-    )
     
+    # Max safe wave height ~3m
+    # Max safe wind ~10 m/s
+    # Max visibility 10km
+
     # Add contributing factors to risk_factors
     if conditions['wave_height'] > 2.0:
+        risk_score += 0.4 * (conditions['wave_height'] / 3.0)
         risk_factors["wave_height"] = f"High waves: {conditions['wave_height']:.1f}m"
     if conditions['wind_speed'] > 8.0:
+        risk_score += 0.3 * (conditions['wind_speed'] / 10.0)
         risk_factors["wind_speed"] = f"Strong winds: {conditions['wind_speed']:.1f}m/s"
     if conditions['visibility'] < 5000:
+        risk_score += 0.2 * (1 - conditions['visibility'] / 10000)
         risk_factors["visibility"] = f"Poor visibility: {conditions['visibility']}m"
     
     # Check cross angles between wind and waves
@@ -178,7 +181,7 @@ def check_port_news(port_name: str) -> Optional[List[str]]:
 if __name__ == "__main__":
     
     eta={"Day": 0, "Hour": 48, "Minute": 0}
-    timestamp="2024-06-01T12:00:00"
+    timestamp="2024-05-28T12:00:00"
     status, risk_score, risk_factors = assess_ship_docking(eta, timestamp)
     print(f"Docking Status: {status}")
     print(f"Risk Score: {risk_score:.2f}")
