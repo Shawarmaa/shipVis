@@ -3,6 +3,7 @@
 import { Marker, Popup } from 'react-leaflet'
 import { memo } from 'react'
 import L from 'leaflet'
+import Link from 'next/link'
 import { Port } from '@/lib/portData'
 
 // Create custom port icons

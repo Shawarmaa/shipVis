@@ -10,6 +10,10 @@ interface WebSocketStatusProps {
   shipsStatus: string
   shipsError?: string
   shipsVessels: Map<any, any>
+  filteredStatus: string
+  filteredError?: string
+  filteredVessels: Map<any, any>
+  allShipsEnabled?: boolean
 }
 
 export default function WebSocketStatus({
@@ -18,7 +22,11 @@ export default function WebSocketStatus({
   vessels,
   shipsStatus,
   shipsError,
-  shipsVessels
+  shipsVessels,
+  filteredStatus,
+  filteredError,
+  filteredVessels,
+  allShipsEnabled = false
 }: WebSocketStatusProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -31,7 +39,7 @@ export default function WebSocketStatus({
     }
   }
 
-  const isConnected = status === 'connected' && shipsStatus === 'connected'
+  const isConnected = status === 'connected' && shipsStatus === 'connected' && filteredStatus === 'connected'
 
   return (
     <div className="absolute bottom-4 right-4 z-[1000]">
@@ -55,12 +63,12 @@ export default function WebSocketStatus({
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-xs">All Ships:</span>
-                <span className={`px-2 py-0.5 rounded text-xs ${getStatusColor(status)}`}>
-                  {status}
+                <span className={`px-2 py-0.5 rounded text-xs ${allShipsEnabled ? getStatusColor(status) : 'bg-gray-600'}`}>
+                  {allShipsEnabled ? status : 'disabled'}
                 </span>
               </div>
-              {error && <p className="text-red-400 text-xs">{error}</p>}
-              <p className="text-xs">Vessels: {vessels.size}</p>
+              {error && allShipsEnabled && <p className="text-red-400 text-xs">{error}</p>}
+              <p className="text-xs">Vessels: {allShipsEnabled ? vessels.size : 0}</p>
             </div>
             
             <div>
@@ -72,6 +80,17 @@ export default function WebSocketStatus({
               </div>
               {shipsError && <p className="text-red-400 text-xs">{shipsError}</p>}
               <p className="text-xs">Port-bound: {shipsVessels.size}</p>
+            </div>
+            
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs">Filtered:</span>
+                <span className={`px-2 py-0.5 rounded text-xs ${getStatusColor(filteredStatus)}`}>
+                  {filteredStatus}
+                </span>
+              </div>
+              {filteredError && <p className="text-red-400 text-xs">{filteredError}</p>}
+              <p className="text-xs">Filtered: {filteredVessels.size}</p>
             </div>
           </div>
         </div>
