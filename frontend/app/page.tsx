@@ -2,6 +2,8 @@
 
 import { useWebSocket } from '@/lib/useWebSocket';
 import dynamic from 'next/dynamic';
+import { useEffect, useState } from 'react';
+import WebSocketStatus from '@/components/WebSocketStatus';
 
 const NauticalMap = dynamic(() => import('@/components/NauticalMap'), {
   ssr: false,
@@ -9,29 +11,60 @@ const NauticalMap = dynamic(() => import('@/components/NauticalMap'), {
 });
 
 export default function Home() {
-  const { status, lastMessage, vessels, error } = useWebSocket('ws://localhost:8000/ws/all_ships');
+  const [allShipsEnabled, setAllShipsEnabled] = useState(true); // Start enabled
+  const { status, lastMessage, vessels, error } = useWebSocket('ws://localhost:8000/ws/all_ships', allShipsEnabled);
+  const { 
+    status: shipsStatus, 
+    lastMessage: shipsLastMessage, 
+    vessels: shipsVessels, 
+    error: shipsError 
+  } = useWebSocket('ws://localhost:8000/ws/ships?port=ROTTERDAM');
+  const { 
+    status: filteredStatus, 
+    lastMessage: filteredLastMessage, 
+    vessels: filteredVessels, 
+    error: filteredError 
+  } = useWebSocket('ws://localhost:8000/ws/filtered_ships');
+
+  // Log ship tracking data
+  useEffect(() => {
+    if (shipsLastMessage) {
+      console.log('🚢 ROTTERDAM SHIPS - New message received:', shipsLastMessage);
+      console.log('🚢 ROTTERDAM SHIPS - Current vessels count:', shipsVessels.size);
+      console.log('🚢 ROTTERDAM SHIPS - All tracked vessels:', Array.from(shipsVessels.values()));
+    }
+  }, [shipsLastMessage, shipsVessels]);
+
+  useEffect(() => {
+    console.log('🚢 ROTTERDAM SHIPS - Connection status changed:', shipsStatus);
+    if (shipsError) {
+      console.error('🚢 ROTTERDAM SHIPS - Error:', shipsError);
+    }
+  }, [shipsStatus, shipsError]);
 
   return (
     <div className="h-screen flex flex-col">
-      {/* Status panel in bottom-left */}
-      <div className="absolute bottom-4 left-4 z-[1000] bg-black/80 backdrop-blur-sm p-3 rounded-lg text-white max-w-xs">
-        <div className="text-sm space-y-1">
-          <div className="flex items-center gap-2">
-            <span>WebSocket:</span>
-            <span className={`px-2 py-0.5 rounded text-xs ${
-              status === 'connected' ? 'bg-green-500' : 
-              status === 'connecting' ? 'bg-yellow-500' : 
-              status === 'error' ? 'bg-red-500' : 'bg-gray-500'
-            }`}>
-              {status}
-            </span>
-          </div>
-          {error && <p className="text-red-400 text-xs">{error}</p>}
-          <p>Vessels tracked: {vessels.size}</p>
-        </div>
-      </div>
+      <WebSocketStatus
+        status={status}
+        error={error}
+        vessels={vessels}
+        shipsStatus={shipsStatus}
+        shipsError={shipsError}
+        shipsVessels={shipsVessels}
+        filteredStatus={filteredStatus}
+        filteredError={filteredError}
+        filteredVessels={filteredVessels}
+        allShipsEnabled={allShipsEnabled}
+      />
 
-      <NauticalMap className="h-full w-full" vessels={vessels} />
+      <NauticalMap 
+        className="h-full w-full" 
+        vessels={vessels} 
+        shipsVessels={shipsVessels} 
+        filteredVessels={filteredVessels}
+        allShipsEnabled={allShipsEnabled}
+        setAllShipsEnabled={setAllShipsEnabled}
+      />
     </div>
   );
 }

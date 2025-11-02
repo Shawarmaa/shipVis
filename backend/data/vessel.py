@@ -91,7 +91,7 @@ async def predict_port_bound_ships(bounding_box: list[list[float]], port: str, f
                 # Yield the data for API consumption
                 yield ship_data.model_dump()
 
-async def get_all_ships(bounding_box: list[list[float]]):
+async def get_filtered_ships(bounding_box: list[list[float]]):
     """
     Async generator that yields all ships in the bounding box that meet minimum size requirements (length > 60m).
     """
@@ -158,6 +158,42 @@ async def get_all_ships(bounding_box: list[list[float]]):
                 
                 # IMPORTANT: Yield the data to return it from the generator
                 yield ship_data.model_dump()
+
+async def get_all_ships(bounding_box: list[list[float]]):
+    """
+    Async generator that yields all ships in the bounding box.
+    """
+    async with websockets.connect("wss://stream.aisstream.io/v0/stream") as websocket:
+        subscribe_message = {"APIKey": os.getenv("AIS_API_KEY"),  # Required !
+                             "BoundingBoxes": [bounding_box], # Required!
+                             "FiltersShipMMSI": None, # Optional!
+                             "FilterMessageTypes": ["PositionReport"]} # Optional!
+        subscribe_message_json = json.dumps(subscribe_message)
+        await websocket.send(subscribe_message_json)
+        
+        async for message_json in websocket:
+            message = json.loads(message_json)
+            position_data = message["Message"]["PositionReport"]
+            print(position_data)
+            user_id = position_data["UserID"]
+            ship_data = ShipPositionData(
+                    mmsi=user_id,
+                    ship_name=message.get("MetaData", {}).get("ShipName", "Unknown"),
+                    latitude=position_data.get("Latitude"),
+                    longitude=position_data.get("Longitude"),
+                    speed=position_data.get("Sog", 0),  # Speed over ground
+                    course=position_data.get("Cog", 0),  # Course over ground
+                    heading=position_data.get("TrueHeading", 0),
+                    nav_status=position_data.get("NavigationalStatus", 15),
+                    timestamp=message.get("MetaData", {}).get("time_utc", datetime.now(timezone.utc).isoformat()),
+                    destination="",
+                    call_sign="",
+                    ship_type=0
+            )
+            
+            # IMPORTANT: Yield the data to return it from the generator
+            yield ship_data.model_dump()
+
 
 async def main():
     """Test function to run the ship tracker"""

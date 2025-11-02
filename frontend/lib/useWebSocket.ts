@@ -8,7 +8,7 @@ interface UseWebSocketReturn {
   error: string | null;
 }
 
-export function useWebSocket(url: string): UseWebSocketReturn {
+export function useWebSocket(url: string, enabled: boolean = true): UseWebSocketReturn {
   const [status, setStatus] = useState<WebSocketStatus>('disconnected');
   const [lastMessage, setLastMessage] = useState<ShipData | null>(null);
   const [vessels, setVessels] = useState<Map<number, ShipData>>(new Map());
@@ -103,7 +103,20 @@ export function useWebSocket(url: string): UseWebSocketReturn {
   };
 
   useEffect(() => {
-    connect();
+    if (enabled) {
+      connect();
+    } else {
+      // Disconnect if disabled
+      if (reconnectTimeoutRef.current) {
+        clearTimeout(reconnectTimeoutRef.current);
+      }
+      if (wsRef.current) {
+        wsRef.current.close();
+        wsRef.current = null;
+      }
+      setStatus('disconnected');
+      setVessels(new Map()); // Clear vessels when disabled
+    }
 
     return () => {
       if (reconnectTimeoutRef.current) {
@@ -113,7 +126,7 @@ export function useWebSocket(url: string): UseWebSocketReturn {
         wsRef.current.close();
       }
     };
-  }, [url]);
+  }, [url, enabled]);
 
   return { status, lastMessage, vessels, error };
 }
