@@ -42,6 +42,7 @@ async def predict_port_bound_ships(bounding_box: list[list[float]], port: str, f
                     continue
                 if static_data["Eta"]["Month"] != 0:
                     continue
+
                 user_id = static_data["UserID"]
                 ships_to_track.add(user_id)
                 
@@ -50,7 +51,8 @@ async def predict_port_bound_ships(bounding_box: list[list[float]], port: str, f
                     "name": static_data.get("Name", "Unknown"),
                     "call_sign": static_data.get("CallSign", ""),
                     "destination": destination,
-                    "ship_type": static_data.get("Type", 0)
+                    "ship_type": static_data.get("Type", 0),
+                    "eta": static_data.get("Eta", None)
                 }
                 
                 print(f"Tracking ship: {static_data.get('Name', 'Unknown')} (MMSI: {user_id}) -> {destination}")
@@ -79,7 +81,9 @@ async def predict_port_bound_ships(bounding_box: list[list[float]], port: str, f
                     timestamp=message.get("MetaData", {}).get("time_utc", datetime.now(timezone.utc).isoformat()),
                     destination=ship_info.get("destination", port),
                     call_sign=ship_info.get("call_sign", ""),
-                    ship_type=ship_info.get("ship_type", 0)
+                    ship_type=ship_info.get("ship_type", 0),
+                    eta=ship_info.get("eta", None)
+
                 )
                 
                 print(f"Position Update - {ship_name} (MMSI: {user_id}): Lat={ship_data.latitude}, Lon={ship_data.longitude}")

@@ -16,7 +16,7 @@ class ShipPositionData(BaseModel):
     destination: str
     call_sign: str
     ship_type: int
-
+    eta: Optional[str] = None
 
 class HourlyInsight(BaseModel):
     time: str
